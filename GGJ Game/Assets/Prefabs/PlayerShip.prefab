@@ -359,6 +359,7 @@ MonoBehaviour:
   Pitch_Max: 45
   pos: {x: 0, y: 0, z: 0}
   rot: {x: 0, y: 0, z: 0}
+  crystal: 1000
 --- !u!54 &6218864196538054935
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -28,9 +28,7 @@ public class ShipController : MonoBehaviour
     private Vector3 rot;
 
     //Crystal value
-    private int crystal;
-
-
+    public int crystal;
 
     // Start is called before the first frame update
     void Start()
