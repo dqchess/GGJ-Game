@@ -50,7 +50,12 @@ public class ShipStatus : MonoBehaviour
     public float waterLeakedDmg;
     public float repairPartyDmg;
 
-    public float timer;
+    public float timer; // for it to run once in Update
+
+    private float m_repairCooldown;
+    public float maxRepairCooldown = 30f;
+    private float m_damageCooldown;
+    public float maxDamageCooldowm = 60f;
 
     //---------------------------
     public void Awake()
@@ -72,23 +77,23 @@ public class ShipStatus : MonoBehaviour
             Destroy(collider.gameObject);
         }
 
-        if (collider.tag == "Metal"  && metal < maxMetal)
+        if (collider.tag == "Metal" && metal < maxMetal)
         {
             metal++;
             Destroy(collider.gameObject);
         }
 
-        if(collider.tag == "Terrain")
+        if (collider.tag == "Terrain")
         {
             health -= damageReceived;
         }
 
-        if(collider.tag == "Enemy")
+        if (collider.tag == "Enemy")
         {
-            for(int i = 0; i < waterLeaked.Length; i++)
+            for (int i = 0; i < waterLeaked.Length; i++)
             {
-                   if(waterLeaked[i] <= 0)
-                    waterLeaked[i] = 30f;                
+                if (waterLeaked[i] <= 0)
+                    waterLeaked[i] = 30f;
             }
         }
     }
@@ -104,6 +109,7 @@ public class ShipStatus : MonoBehaviour
         CurrentDepth = transform.position.y;
         //lighting check
         lightingCheck();
+
         //buff update
         buffTimerUpdate();
         timer -= Time.deltaTime;
@@ -113,41 +119,52 @@ public class ShipStatus : MonoBehaviour
             timer = 1f;
         }
 
+        repairCooldown -= Time.deltaTime;
+        damageCooldown -= Time.deltaTime;
     }
 
     // buffs
-    public void SetRepairParty()
+    public void SetRepairParty() // set the timer buff from 0 to 15
     {
-        for (int i = 0; i < repairParty.Length; i++)
+        if(repairCooldown <= 0)
         {
-            if(repairParty[i] <= 0)
+            for (int i = 0; i < repairParty.Length; i++)
             {
-                repairParty[i] = 15f;
-            }
-        }
-    }
-
-    public void SetDamageControl()
-    {
-        for (int i = 0; i < damageControl.Length; i++)
-        {
-            if(damageControl[i] <= 0)
-            {
-                for (int f = 0; f < waterLeaked.Length; f++)
+                if (repairParty[i] <= 0)
                 {
-                    waterLeaked[f] = 0f;
+                    repairParty[i] = 15f;
                 }
             }
+            repairCooldown = maxRepairCooldown;
+        }
+
+    }
+
+    public void SetDamageControl() // set the waterLeaked buff timer to 0
+    {
+        if(damageCooldown <= 0)
+        {
+            for (int i = 0; i < damageControl.Length; i++)
+            {
+                if (damageControl[i] <= 0)
+                {
+                    for (int f = 0; f < waterLeaked.Length; f++)
+                    {
+                        waterLeaked[f] = 0f;
+                    }
+                }
+            }
+            damageCooldown = maxDamageCooldowm;
         }
     }
-    private void hpBuffEffect()
+    private void hpBuffEffect() // this is where the health will get damage from enemy
     {
-        float repairPartyNum = 0;
+        float repairPartyNum = 0; // call a empty float for it to store arrays of repairs and leaked
         float waterLeakedNum = 0;
 
-        for (int i = 0; i < repairParty.Length; i++)
+        for (int i = 0; i < repairParty.Length; i++) // this is where the buff run, it starts as 0, in order to increase, timer has to be > 0
         {
-            if(repairParty[i] > 0)
+            if (repairParty[i] > 0)
             {
                 repairPartyNum++;
             }
@@ -155,7 +172,7 @@ public class ShipStatus : MonoBehaviour
 
         for (int i = 0; i < waterLeaked.Length; i++)
         {
-            if(waterLeaked[i] > 0)
+            if (waterLeaked[i] > 0)
             {
                 waterLeakedNum++;
             }
@@ -163,21 +180,21 @@ public class ShipStatus : MonoBehaviour
 
         health = health - waterLeakedNum * waterLeakedDmg + repairPartyNum * repairPartyDmg;
     }
-    private void buffTimerUpdate()
+    private void buffTimerUpdate() // this is how long the buff could run in the game
     {
-        for(int i = 0; i<damageControl.Length; i++)
+        for (int i = 0; i < damageControl.Length; i++)
         {
-            if(damageControl[i] > 0)
+            if (damageControl[i] > 0)
             {
-                for(int t = 0; t < waterLeaked.Length; t++)
+                for (int t = 0; t < waterLeaked.Length; t++)
                 {
                     waterLeaked[t] = 0;
                 }
             }
         }
-        for (int i = 0; i < waterLeaked.Length; i++)
-        {
-            if(waterLeaked[i] > 0)
+        for (int i = 0; i < waterLeaked.Length; i++) // if this is bigger than 0, where we set it above to activate it
+        {                                            // minus time delta until it reaches false
+            if (waterLeaked[i] > 0)
             {
                 waterLeaked[i] -= Time.deltaTime;
             }
@@ -289,5 +306,17 @@ public class ShipStatus : MonoBehaviour
     {
         get { return m_maxMetal; }
         set { m_maxMetal = value; }
+    }
+
+    public float repairCooldown
+    {
+        get { return m_repairCooldown; }
+        set { m_repairCooldown = value; }
+    }
+
+    public float damageCooldown
+    {
+        get { return m_damageCooldown; }
+        set { m_damageCooldown = value; }
     }
 }

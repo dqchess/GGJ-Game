@@ -1173,28 +1173,57 @@ PrefabInstance:
       propertyPath: repairShip
       value: 
       objectReference: {fileID: 980180252}
+    - target: {fileID: 3046503291326088641, guid: b58deefb6d4b1304c89d788673178585,
+        type: 3}
+      propertyPath: m_Name
+      value: DamageCooldown
+      objectReference: {fileID: 0}
     - target: {fileID: 4059311979157325605, guid: b58deefb6d4b1304c89d788673178585,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2127242716}
-    - target: {fileID: 4059311979157325605, guid: b58deefb6d4b1304c89d788673178585,
+    - target: {fileID: 6755813334814599732, guid: b58deefb6d4b1304c89d788673178585,
         type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetRepairParty
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7577466157714867925, guid: b58deefb6d4b1304c89d788673178585,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 2.300003
       objectReference: {fileID: 0}
     - target: {fileID: 9205160003424009287, guid: b58deefb6d4b1304c89d788673178585,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2127242716}
-    - target: {fileID: 9205160003424009287, guid: b58deefb6d4b1304c89d788673178585,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetDamageControl
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b58deefb6d4b1304c89d788673178585, type: 3}
+--- !u!114 &1027437545 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2311937111418995942, guid: b58deefb6d4b1304c89d788673178585,
+    type: 3}
+  m_PrefabInstance: {fileID: 1027437544}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1027437546 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6643372582944845911, guid: b58deefb6d4b1304c89d788673178585,
+    type: 3}
+  m_PrefabInstance: {fileID: 1027437544}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1138484418
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2704,6 +2733,14 @@ PrefabInstance:
       propertyPath: shipStatus
       value: 
       objectReference: {fileID: 2127242716}
+    - target: {fileID: 675863871, guid: c21e0111ac45b1a4592a831d6a739bf7, type: 3}
+      propertyPath: repairCooldown
+      value: 
+      objectReference: {fileID: 1027437546}
+    - target: {fileID: 675863871, guid: c21e0111ac45b1a4592a831d6a739bf7, type: 3}
+      propertyPath: damageCooldown
+      value: 
+      objectReference: {fileID: 1027437545}
     - target: {fileID: 7345710904771220305, guid: c21e0111ac45b1a4592a831d6a739bf7,
         type: 3}
       propertyPath: m_Name

@@ -8,7 +8,8 @@ public class HealthUI : MonoBehaviour
     public ShipStatus shipStatus;
     public Image healthFiller;
 
-    public bool isPartyToggled = false;
+    public Text repairCooldown;
+    public Text damageCooldown;
 
     public void Start()
     {
@@ -18,15 +19,16 @@ public class HealthUI : MonoBehaviour
     public void Update()
     {
         healthFiller.fillAmount = shipStatus.health / shipStatus.maxHealth;
-
-        //if (isPartyToggled)
-        //{
-        //    shipStatus.health _
-        //}
+        repairCooldown.text = ((int)shipStatus.repairCooldown).ToString();
+        if(shipStatus.repairCooldown <= 0)
+        {
+            repairCooldown.text = 0f.ToString();
+        }
+        damageCooldown.text = ((int)shipStatus.damageCooldown).ToString();
+        if(shipStatus.damageCooldown <= 0)
+        {
+            damageCooldown.text = 0f.ToString();
+        }
     }
 
-    public void ToggleRepairParty()
-    {
-        isPartyToggled = !isPartyToggled;
-    }
 }
