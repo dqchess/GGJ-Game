@@ -29,6 +29,8 @@ public class ShipStatus : MonoBehaviour
     [SerializeField]
     private float CurrentDepth;
 
+    //System Status
+    private bool lightSystem = false;
 
     //-----------------------------------------
     private void OnTriggerEnter(Collider collider)
@@ -89,6 +91,17 @@ public class ShipStatus : MonoBehaviour
     }
     public void lightingSwitch()
     {
-        light = !light;
+        if (lightSystem)
+        {
+            light = !light;
+        }
+    }
+    public bool lightsystem_Check()
+    {
+        return lightSystem;
+    }
+    public void lightsystem_Set(bool status)
+    {
+        lightSystem = status;
     }
 }
