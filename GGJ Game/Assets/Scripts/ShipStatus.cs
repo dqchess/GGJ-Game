@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ShipStatus : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class ShipStatus : MonoBehaviour
     public int energy;
     public int metal;
 
+    public GameObject repairUI;
 
     private void OnTriggerEnter(Collider collider)
     {
@@ -27,6 +29,14 @@ public class ShipStatus : MonoBehaviour
         {
             metal++;
             Destroy(collider.gameObject);
+        }
+    }
+
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.I))
+        {
+            repairUI.SetActive(!repairUI.activeInHierarchy);
         }
     }
 }
