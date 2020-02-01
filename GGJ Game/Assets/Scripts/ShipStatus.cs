@@ -13,9 +13,9 @@ public class ShipStatus : MonoBehaviour
     [SerializeField] private int m_energy;
     [SerializeField] private int m_metal;
 
-    [SerializeField] private int m_maxCrystal = 20;
-    [SerializeField] private int m_maxEnergy = 20;
-    [SerializeField] private int m_maxMetal = 20;
+    [SerializeField] private int m_maxCrystal = 5;
+    [SerializeField] private int m_maxEnergy = 5;
+    [SerializeField] private int m_maxMetal = 5;
 
     public GameObject repairUI;
 
