@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1088727058}
   - component: {fileID: 1088727057}
   m_Layer: 5
-  m_Name: Button
+  m_Name: ButtonLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -516,7 +516,7 @@ GameObject:
   - component: {fileID: 1578147375041288414}
   - component: {fileID: 1578147375041288413}
   m_Layer: 5
-  m_Name: Button
+  m_Name: ButtonClose
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -720,7 +720,7 @@ GameObject:
   - component: {fileID: 1578147375684089324}
   - component: {fileID: 1578147375684089323}
   m_Layer: 5
-  m_Name: Filler
+  m_Name: TankFiller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
