@@ -30,7 +30,7 @@ public class ShipMovement : MonoBehaviour
     {
         moveDirection = transform.right * movePos.x + transform.up * movePos.y + transform.forward * movePos.z;
         myRigidbody.MovePosition(transform.position + moveDirection);
-        myRigidbody.AddRelativeTorque(moveRot);
+        myRigidbody.AddRelativeTorque(moveRot*500);
 
     }
 }

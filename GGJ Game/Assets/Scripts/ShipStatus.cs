@@ -80,7 +80,7 @@ public class ShipStatus : MonoBehaviour
         }
         else
         {
-            DetectRange = 50f;
+            DetectRange = DetectRange_Min;
 
             DetectDepth = SeaLevel - CurrentDepth + DetectDepthRange;
         }
