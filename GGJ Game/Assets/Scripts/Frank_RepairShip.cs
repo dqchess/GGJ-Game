@@ -7,6 +7,7 @@ using UnityEngine.EventSystems;
 public class Frank_RepairShip : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
     public GameObject repairPanel;
+    public GameObject progressPanel;
     public Image broken;
     public Image repairProgress;
     public ShipController shipController;
@@ -14,13 +15,18 @@ public class Frank_RepairShip : MonoBehaviour, IPointerEnterHandler, IPointerExi
     [SerializeField]
     int repairAmount;
 
-    float repairTime = 5.0f;
+    float repairTime;
+    float maxRepairTime;
 
-    bool isUpgraded = false; // Is the time runned out 
+    bool isUpgraded = false; // Is the time runned out
 
     private void Start()
     {
         repairProgress.fillAmount = 0;
+
+        repairTime = repairAmount;
+
+        maxRepairTime = repairTime;
     }
 
     public void OnPointerEnter(PointerEventData eventData)
@@ -35,6 +41,8 @@ public class Frank_RepairShip : MonoBehaviour, IPointerEnterHandler, IPointerExi
 
     public void OnPointerClick(PointerEventData eventData)
     {
+        progressPanel.gameObject.SetActive(true);
+
         if(shipController.crystal >= repairAmount)
         {
             shipController.crystal -= repairAmount;
@@ -47,12 +55,14 @@ public class Frank_RepairShip : MonoBehaviour, IPointerEnterHandler, IPointerExi
         if(isUpgraded)
         {
             repairTime -= Time.deltaTime;
-            repairProgress.fillAmount = 1 - repairTime / 5;
+            repairProgress.fillAmount = 1 - repairTime / maxRepairTime;
+            repairPanel.SetActive(false);
         }
 
         if (repairTime <= 0)
         {
             broken.gameObject.SetActive(false);
+            progressPanel.gameObject.SetActive(false);
         }    
     }
 }
