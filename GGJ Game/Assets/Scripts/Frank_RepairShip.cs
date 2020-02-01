@@ -12,13 +12,15 @@ public class Frank_RepairShip : MonoBehaviour, IPointerEnterHandler, IPointerExi
     public Image repairProgress;
     public ShipStatus shipStatus;
 
+    public Frank_AddEnergy addEnergy;
+
     [SerializeField]
     int repairAmount;
 
     float repairTime;
     float maxRepairTime;
 
-    bool isUpgraded = false; // Is the time runned out
+    public bool isUpgraded = false; // Is the time runned out
 
     private void Start()
     {
@@ -48,6 +50,9 @@ public class Frank_RepairShip : MonoBehaviour, IPointerEnterHandler, IPointerExi
             isUpgraded = true;
 
             shipStatus.lightsystem_Set(true);
+
+            addEnergy.energyFiller.fillAmount += .2f;
+            addEnergy.curEnergy -= 1;
         }
     }
 
