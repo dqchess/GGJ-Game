@@ -46,6 +46,8 @@ public class Frank_RepairShip : MonoBehaviour, IPointerEnterHandler, IPointerExi
             progressPanel.gameObject.SetActive(true);
             shipStatus.crystal -= repairAmount;
             isUpgraded = true;
+
+            shipStatus.lightsystem_Set(true);
         }
     }
 

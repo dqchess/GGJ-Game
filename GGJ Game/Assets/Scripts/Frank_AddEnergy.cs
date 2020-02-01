@@ -18,8 +18,14 @@ public class Frank_AddEnergy : MonoBehaviour
 
     public void ToggleEngine()
     {
+        Debug.Log("1");
+        if (curEnergy <= 0)
+            return;
+
         engineOff.gameObject.SetActive(!engineOff.isActiveAndEnabled);
         engineOn.gameObject.SetActive(!engineOn.isActiveAndEnabled);
+
+        shipStatus.lightingSwitch();
     }
 
     public void AddEnergy()
