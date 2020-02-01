@@ -19,6 +19,8 @@ public class Sonar : MonoBehaviour
     {
         Timer -= Time.deltaTime;
         if (Timer <= 0) {
+            Timer = time;
+            transform.localScale = new Vector3(1, 1, 1);
             gameObject.SetActive(false);
         }
         else

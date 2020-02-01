@@ -39,8 +39,15 @@ public class ShipStatus : MonoBehaviour
 
     //System Status
     private bool lightSystem = false;
-
+    private bool sonarSystem = false;
     //-----------------------------------------
+
+
+
+    //sonar
+    public GameObject SWController;
+    //.........
+
 
     // buff
     public float[] repairParty;
@@ -318,5 +325,15 @@ public class ShipStatus : MonoBehaviour
     {
         get { return m_damageCooldown; }
         set { m_damageCooldown = value; }
+    }
+    //Snoar
+    public void sonar_Active()
+    {
+        if (sonarSystem)
+            SWController.SetActive(true);
+    }
+    public void sonar_Fixed()
+    {
+        sonarSystem = true;
     }
 }

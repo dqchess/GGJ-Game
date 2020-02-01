@@ -6,7 +6,8 @@ public class PlayerInput : MonoBehaviour
 {
 
     
-    private ShipController shipController;
+    public ShipController shipController;
+    public ShipStatus shipStatus;
     [SerializeField]
     private Vector3 posInput;
     [SerializeField]
@@ -22,7 +23,6 @@ public class PlayerInput : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        shipController = GetComponent<ShipController>();
     }
 
     // Update is called once per frame
@@ -30,6 +30,7 @@ public class PlayerInput : MonoBehaviour
     {
         movementInput();
         ResetInput();
+        sonarInput();
     }
     //
     void FixUpdate()
@@ -56,7 +57,9 @@ public class PlayerInput : MonoBehaviour
     }
     //Sona Input
     private void sonarInput()
-    {        
+    {
+        if (Input.GetButtonDown("Sonar"))
+            shipStatus.sonar_Active();
     }
 
 
