@@ -1834,6 +1834,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SubRepairUI
       objectReference: {fileID: 0}
+    - target: {fileID: 5442263582544602488, guid: 5536e6c302444634fb048b047b7aa1d5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5536e6c302444634fb048b047b7aa1d5, type: 3}
 --- !u!1001 &7345710905177591403
