@@ -13,19 +13,25 @@ public class Frank_AddEnergy : MonoBehaviour
 
     public Button energyPanelButton;
 
+    public Frank_RepairShip repairShip;
+
     int maxEnergy = 5;
-    int curEnergy;
+    public int curEnergy;
+
+    private void Start()
+    {
+        curEnergy = maxEnergy;
+    }
 
     public void ToggleEngine()
     {
-        Debug.Log("1");
-        if (curEnergy <= 0)
-            return;
+        if(repairShip.isUpgraded == true)
+        {
+            engineOff.gameObject.SetActive(!engineOff.isActiveAndEnabled);
+            engineOn.gameObject.SetActive(!engineOn.isActiveAndEnabled);
 
-        engineOff.gameObject.SetActive(!engineOff.isActiveAndEnabled);
-        engineOn.gameObject.SetActive(!engineOn.isActiveAndEnabled);
-
-        shipStatus.lightingSwitch();
+            shipStatus.lightingSwitch();
+        }
     }
 
     public void AddEnergy()

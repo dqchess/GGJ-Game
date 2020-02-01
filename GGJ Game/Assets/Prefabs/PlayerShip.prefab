@@ -643,17 +643,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3f53f987d3e0db49aa191b71104f562, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  crystal: 0
-  energy: 0
-  metal: 0
+  m_health: 0
+  m_maxHealth: 100
+  m_crystal: 0
+  m_energy: 0
+  m_metal: 0
+  m_maxCrystal: 20
+  m_maxEnergy: 20
+  m_maxMetal: 20
   repairUI: {fileID: 0}
   SeaLevel: 42
   Depth_Max: 0
   DetectDepthRange: 10
-  DetectRange_Min: 50
+  DetectRange_Min: 100
   DetectRange_Max: 500
   waterBox: {fileID: 0}
-  light: 1
+  light: 0
   DetectRange: 50
   DetectDepth: 0
   CurrentDepth: 0
