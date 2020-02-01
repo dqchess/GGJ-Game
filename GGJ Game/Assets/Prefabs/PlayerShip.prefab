@@ -367,7 +367,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6218864196538054930}
   serializedVersion: 2
-  m_Mass: 100000
+  m_Mass: 10
   m_Drag: 0
   m_AngularDrag: 5
   m_UseGravity: 0
@@ -595,6 +595,7 @@ GameObject:
   - component: {fileID: 5577375249946794383}
   - component: {fileID: 8884147930428001313}
   - component: {fileID: 211455813}
+  - component: {fileID: 6120007121660664237}
   m_Layer: 0
   m_Name: ShipStatus
   m_TagString: Untagged
@@ -656,3 +657,17 @@ MonoBehaviour:
   DetectRange: 50
   DetectDepth: 0
   CurrentDepth: 0
+--- !u!136 &6120007121660664237
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9185313386399155349}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 6
+  m_Height: 37
+  m_Direction: 2
+  m_Center: {x: 0, y: 0, z: 0}
