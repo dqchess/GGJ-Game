@@ -2461,17 +2461,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 211455813, guid: e8f93d29f33993c40b913d60deb48b7d, type: 3}
-      propertyPath: light
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 211455813, guid: e8f93d29f33993c40b913d60deb48b7d, type: 3}
       propertyPath: waterBox
       value: 
       objectReference: {fileID: 683962100}
-    - target: {fileID: 211455813, guid: e8f93d29f33993c40b913d60deb48b7d, type: 3}
-      propertyPath: DetectRange_Min
-      value: 100
-      objectReference: {fileID: 0}
     - target: {fileID: 211455813, guid: e8f93d29f33993c40b913d60deb48b7d, type: 3}
       propertyPath: repairUI
       value: 
