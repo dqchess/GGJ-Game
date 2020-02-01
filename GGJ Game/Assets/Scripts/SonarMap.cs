@@ -18,7 +18,8 @@ public class SonarMap : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        MapUpdate(TIcon,shipController.ResourcesList_Get());
+        MapUpdate(RIcon, shipController.ResourcesList_Get());
+        MapUpdate(TIcon, shipController.TargetList_Get());
     }
     private void MapUpdate(GameObject[] iconList, List<GameObject> itemList)
     {
@@ -27,11 +28,21 @@ public class SonarMap : MonoBehaviour
             {
                 if (i < itemList.Count)
                 {
-                    ShipPosX = itemList.ToArray()[i].transform.position.x - shipController.posX;
-                    ShipPosY = itemList.ToArray()[i].transform.position.y - shipController.posZ;
-                    ShipPosX = ShipPosX / 300 * 180;
-                    ShipPosY = ShipPosY / 300 * 180;
-                    iconList[i].transform.position = new Vector3(ShipPosX, ShipPosY, 0);
+                    iconList[i].SetActive(true);
+                    if (itemList.ToArray()[i] != null)
+                    {
+                        ShipPosX = itemList.ToArray()[i].transform.position.x - shipController.posX;
+                        ShipPosY = itemList.ToArray()[i].transform.position.z - shipController.posZ;
+                        ShipPosX = ShipPosX / 300 * 180;
+                        ShipPosY = ShipPosY / 300 * 180;
+                        iconList[i].transform.localPosition = new Vector3(ShipPosX, ShipPosY, 0);
+                    }
+                    else
+                        iconList[i].SetActive(false);
+                }
+                else
+                {
+                    iconList[i].SetActive(false);
                 }
             }
     }

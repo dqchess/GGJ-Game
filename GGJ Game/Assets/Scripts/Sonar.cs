@@ -7,11 +7,10 @@ public class Sonar : MonoBehaviour
     public float Range = 300f;
     public float time = 2.0f;
     private float Timer;
-    private ShipController shipController;
+    public ShipController shipController;
     // Start is called before the first frame update
     void Start()
     {
-        shipController = GetComponent<ShipController>();
         Timer = time;
     }
 
@@ -20,7 +19,7 @@ public class Sonar : MonoBehaviour
     {
         Timer -= Time.deltaTime;
         if (Timer <= 0) {
-            //Destroy(gameObject);
+            gameObject.SetActive(false);
         }
         else
         {
@@ -30,9 +29,8 @@ public class Sonar : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.name);
         GameObject otherObject = other.gameObject;
-        if (other.tag == "Resources")
+        if (other.tag == "Crystal")
             shipController.ResourcesList_Add(otherObject);
         else if(other.tag == "Enemies")
             shipController.TargetList_Add(otherObject);

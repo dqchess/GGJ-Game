@@ -30,7 +30,7 @@ public class ShipController : MonoBehaviour
     [SerializeField]
     private Vector3 rot;
     //SonarSystem
-
+    [SerializeField]
     public List<GameObject> ResourcesList;
     public List<GameObject> TargetList;
 
