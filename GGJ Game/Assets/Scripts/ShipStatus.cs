@@ -87,4 +87,8 @@ public class ShipStatus : MonoBehaviour
 
         waterBox.transform.localScale = new Vector3(DetectRange,DetectDepth, DetectRange);
     }
+    public void lightingSwitch()
+    {
+        light = !light;
+    }
 }
