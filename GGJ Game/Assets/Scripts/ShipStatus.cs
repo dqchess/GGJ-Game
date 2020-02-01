@@ -11,6 +11,26 @@ public class ShipStatus : MonoBehaviour
 
     public GameObject repairUI;
 
+
+    //Lighting
+    public float SeaLevel = 42f;
+    public float Depth_Max = 0f;
+    public float DetectDepthRange = 10f;
+    public float DetectRange_Min = 50f;
+    public float DetectRange_Max = 500f;
+    public GameObject waterBox;
+
+    [SerializeField]
+    private bool light = false;
+    [SerializeField]
+    private float DetectRange = 50f;
+    [SerializeField]
+    private float DetectDepth;
+    [SerializeField]
+    private float CurrentDepth;
+
+
+    //-----------------------------------------
     private void OnTriggerEnter(Collider collider)
     {
         if (collider.tag == "Crystal")
@@ -38,5 +58,33 @@ public class ShipStatus : MonoBehaviour
         {
             repairUI.SetActive(!repairUI.activeInHierarchy);
         }
+
+        //get current depth
+        CurrentDepth = transform.position.y;
+        //lighting check
+        lightingCheck();
+    }
+
+    //lighting
+    private void lightingCheck()
+    {
+        //safety check
+        if (waterBox == null)
+            return;
+        //get DetectRange
+        if (light)
+        {
+            DetectRange = DetectRange_Max;
+            DetectDepth = SeaLevel - Depth_Max + DetectDepthRange;
+            Debug.Log(SeaLevel - Depth_Max);
+        }
+        else
+        {
+            DetectRange = 50f;
+
+            DetectDepth = SeaLevel - CurrentDepth + DetectDepthRange;
+        }
+
+        waterBox.transform.localScale = new Vector3(DetectRange,DetectDepth, DetectRange);
     }
 }
