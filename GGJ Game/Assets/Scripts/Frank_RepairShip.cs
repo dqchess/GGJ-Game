@@ -10,7 +10,7 @@ public class Frank_RepairShip : MonoBehaviour, IPointerEnterHandler, IPointerExi
     public GameObject progressPanel;
     public Image broken;
     public Image repairProgress;
-    public ShipController shipController;
+    public ShipStatus shipStatus;
 
     [SerializeField]
     int repairAmount;
@@ -41,11 +41,10 @@ public class Frank_RepairShip : MonoBehaviour, IPointerEnterHandler, IPointerExi
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        progressPanel.gameObject.SetActive(true);
-
-        if(shipController.crystal >= repairAmount)
+        if(shipStatus.crystal >= repairAmount)
         {
-            shipController.crystal -= repairAmount;
+            progressPanel.gameObject.SetActive(true);
+            shipStatus.crystal -= repairAmount;
             isUpgraded = true;
         }
     }

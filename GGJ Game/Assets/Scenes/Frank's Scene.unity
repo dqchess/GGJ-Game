@@ -213,7 +213,7 @@ RectTransform:
   m_Children:
   - {fileID: 641214179}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -515,7 +515,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &287647025
 GameObject:
@@ -574,8 +574,7 @@ MonoBehaviour:
   progressPanel: {fileID: 725712848}
   broken: {fileID: 1947696080}
   repairProgress: {fileID: 2107350467}
-  shipController: {fileID: 6218864196538054934, guid: e8f93d29f33993c40b913d60deb48b7d,
-    type: 3}
+  shipStatus: {fileID: 595783007}
   repairAmount: 5
 --- !u!114 &287647028
 MonoBehaviour:
@@ -927,6 +926,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 527081788}
   m_CullTransparentMesh: 0
+--- !u!114 &595783007 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 211455813, guid: e8f93d29f33993c40b913d60deb48b7d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1608471534}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3f53f987d3e0db49aa191b71104f562, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &641214178
 GameObject:
   m_ObjectHideFlags: 0
@@ -1696,7 +1707,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &1256797293
 GameObject:
@@ -2022,8 +2033,7 @@ MonoBehaviour:
   progressPanel: {fileID: 1256797293}
   broken: {fileID: 2055253894}
   repairProgress: {fileID: 1993596634}
-  shipController: {fileID: 6218864196538054934, guid: e8f93d29f33993c40b913d60deb48b7d,
-    type: 3}
+  shipStatus: {fileID: 595783007}
   repairAmount: 2
 --- !u!1 &1439679517
 GameObject:
@@ -2159,8 +2169,7 @@ MonoBehaviour:
   progressPanel: {fileID: 1039993085}
   broken: {fileID: 1013835905}
   repairProgress: {fileID: 1167387984}
-  shipController: {fileID: 6218864196538054934, guid: e8f93d29f33993c40b913d60deb48b7d,
-    type: 3}
+  shipStatus: {fileID: 595783007}
   repairAmount: 25
 --- !u!114 &1550706731
 MonoBehaviour:
@@ -2198,6 +2207,75 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1550706728}
   m_CullTransparentMesh: 0
+--- !u!1001 &1608471534
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6218864196538054930, guid: e8f93d29f33993c40b913d60deb48b7d,
+        type: 3}
+      propertyPath: m_Name
+      value: PlayerShip
+      objectReference: {fileID: 0}
+    - target: {fileID: 6218864196538054931, guid: e8f93d29f33993c40b913d60deb48b7d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 503.01443
+      objectReference: {fileID: 0}
+    - target: {fileID: 6218864196538054931, guid: e8f93d29f33993c40b913d60deb48b7d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 11.611811
+      objectReference: {fileID: 0}
+    - target: {fileID: 6218864196538054931, guid: e8f93d29f33993c40b913d60deb48b7d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 630.4288
+      objectReference: {fileID: 0}
+    - target: {fileID: 6218864196538054931, guid: e8f93d29f33993c40b913d60deb48b7d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6218864196538054931, guid: e8f93d29f33993c40b913d60deb48b7d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6218864196538054931, guid: e8f93d29f33993c40b913d60deb48b7d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6218864196538054931, guid: e8f93d29f33993c40b913d60deb48b7d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6218864196538054931, guid: e8f93d29f33993c40b913d60deb48b7d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6218864196538054931, guid: e8f93d29f33993c40b913d60deb48b7d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6218864196538054931, guid: e8f93d29f33993c40b913d60deb48b7d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6218864196538054931, guid: e8f93d29f33993c40b913d60deb48b7d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e8f93d29f33993c40b913d60deb48b7d, type: 3}
 --- !u!1 &1691975753
 GameObject:
   m_ObjectHideFlags: 0
@@ -2999,8 +3077,7 @@ MonoBehaviour:
   progressPanel: {fileID: 1774918769}
   broken: {fileID: 266774506}
   repairProgress: {fileID: 1822822095}
-  shipController: {fileID: 6218864196538054934, guid: e8f93d29f33993c40b913d60deb48b7d,
-    type: 3}
+  shipStatus: {fileID: 595783007}
   repairAmount: 10
 --- !u!114 &2120707887
 MonoBehaviour:
@@ -3093,7 +3170,7 @@ PrefabInstance:
     - target: {fileID: 1578147374763310253, guid: b58deefb6d4b1304c89d788673178585,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1578147374763310253, guid: b58deefb6d4b1304c89d788673178585,
         type: 3}

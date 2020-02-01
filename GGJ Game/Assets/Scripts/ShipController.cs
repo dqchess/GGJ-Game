@@ -27,8 +27,6 @@ public class ShipController : MonoBehaviour
     [SerializeField]
     private Vector3 rot;
 
-    //Crystal value
-    public int crystal;
 
     // Start is called before the first frame update
     void Start()
@@ -67,14 +65,6 @@ public class ShipController : MonoBehaviour
         if (functionType.Equals("Reset"))
         {
             Speed = 0;
-        }
-    }
-
-    private void OnCollisionEnter(Collision other)
-    {
-        if(other.collider.tag == "Crystal")
-        {
-            crystal++;
         }
     }
 }
