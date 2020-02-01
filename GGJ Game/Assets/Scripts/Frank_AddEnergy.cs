@@ -11,6 +11,8 @@ public class Frank_AddEnergy : MonoBehaviour
 
     public ShipStatus shipStatus;
 
+    public Button energyPanelButton;
+
     int maxEnergy = 5;
     int curEnergy;
 
@@ -28,5 +30,12 @@ public class Frank_AddEnergy : MonoBehaviour
             shipStatus.energy -= 1;
             curEnergy++;
         }
+    }
+
+    public void ToggleEnergyPanel()
+    {
+        gameObject.SetActive(!gameObject.activeInHierarchy);
+
+        energyPanelButton.gameObject.SetActive(!energyPanelButton.gameObject.activeInHierarchy);
     }
 }
