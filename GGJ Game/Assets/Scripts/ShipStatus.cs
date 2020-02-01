@@ -14,16 +14,19 @@ public class ShipStatus : MonoBehaviour
         if (collider.tag == "Crystal")
         {
             crystal++;
+            Destroy(collider.gameObject);
         }
 
         if (collider.tag == "Energy")
         {
             energy++;
+            Destroy(collider.gameObject);
         }
 
         if (collider.tag == "Metal")
         {
             metal++;
+            Destroy(collider.gameObject);
         }
     }
 }
