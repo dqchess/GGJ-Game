@@ -1183,6 +1183,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 211455813, guid: e8f93d29f33993c40b913d60deb48b7d, type: 3}
+      propertyPath: repairParty.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 211455813, guid: e8f93d29f33993c40b913d60deb48b7d, type: 3}
+      propertyPath: waterLeaked.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 211455813, guid: e8f93d29f33993c40b913d60deb48b7d, type: 3}
+      propertyPath: damageControl.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 211455813, guid: e8f93d29f33993c40b913d60deb48b7d, type: 3}
       propertyPath: waterBox
       value: 
       objectReference: {fileID: 683962100}
@@ -1190,6 +1202,22 @@ PrefabInstance:
       propertyPath: repairUI
       value: 
       objectReference: {fileID: 285978348}
+    - target: {fileID: 211455813, guid: e8f93d29f33993c40b913d60deb48b7d, type: 3}
+      propertyPath: repairParty.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 211455813, guid: e8f93d29f33993c40b913d60deb48b7d, type: 3}
+      propertyPath: waterLeakedDmg
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 211455813, guid: e8f93d29f33993c40b913d60deb48b7d, type: 3}
+      propertyPath: repairPartyDmg
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 211455813, guid: e8f93d29f33993c40b913d60deb48b7d, type: 3}
+      propertyPath: m_crystal
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6218864196538054930, guid: e8f93d29f33993c40b913d60deb48b7d,
         type: 3}
       propertyPath: m_Name
@@ -1720,7 +1748,7 @@ GameObject:
   - component: {fileID: 1490849953}
   m_Layer: 0
   m_Name: Terrain
-  m_TagString: Terrain
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295

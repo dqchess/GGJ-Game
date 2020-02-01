@@ -42,6 +42,17 @@ public class ShipStatus : MonoBehaviour
 
     //-----------------------------------------
 
+    // buff
+    public float[] repairParty;
+    public float[] damageControl;
+    public float[] waterLeaked;
+
+    public float waterLeakedDmg;
+    public float repairPartyDmg;
+
+    public float timer;
+
+    //---------------------------
     public void Awake()
     {
         health = maxHealth;
@@ -71,6 +82,15 @@ public class ShipStatus : MonoBehaviour
         {
             health -= damageReceived;
         }
+
+        if(collider.tag == "Enemy")
+        {
+            for(int i = 0; i < waterLeaked.Length; i++)
+            {
+                   if(waterLeaked[i] <= 0)
+                    waterLeaked[i] = 30f;                
+            }
+        }
     }
 
     private void Update()
@@ -84,6 +104,74 @@ public class ShipStatus : MonoBehaviour
         CurrentDepth = transform.position.y;
         //lighting check
         lightingCheck();
+        //buff update
+        buffTimerUpdate();
+        timer -= Time.deltaTime;
+        if (timer <= 0)
+        {
+            hpBuffEffect();
+            timer = 1f;
+        }
+
+    }
+    private void hpBuffEffect()
+    {
+        float repairPartyNum = 0;
+        float waterLeakedNum = 0;
+
+        for (int i = 0; i < repairParty.Length; i++)
+        {
+            if(repairParty[i] > 0)
+            {
+                repairPartyNum++;
+            }
+        }
+
+        for (int i = 0; i < waterLeaked.Length; i++)
+        {
+            if(waterLeaked[i] > 0)
+            {
+                waterLeakedNum++;
+            }
+        }
+
+        health = health - waterLeakedNum * waterLeakedDmg + repairPartyNum * repairPartyDmg;
+    }
+    private void buffTimerUpdate()
+    {
+        for(int i = 0; i<damageControl.Length; i++)
+        {
+            if(damageControl[i] > 0)
+            {
+                for(int t = 0; t < waterLeaked.Length; t++)
+                {
+                    waterLeaked[t] = 0;
+                }
+            }
+        }
+        for (int i = 0; i < waterLeaked.Length; i++)
+        {
+            if(waterLeaked[i] > 0)
+            {
+                waterLeaked[i] -= Time.deltaTime;
+            }
+        }
+
+        for (int i = 0; i < repairParty.Length; i++)
+        {
+            if (repairParty[i] > 0)
+            {
+                repairParty[i] -= Time.deltaTime;
+            }
+        }
+
+        for (int i = 0; i < damageControl.Length; i++)
+        {
+            if (damageControl[i] > 0)
+            {
+                damageControl[i] -= Time.deltaTime;
+            }
+        }
     }
 
     //lighting
