@@ -139,7 +139,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &101842143
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -726,7 +726,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   repairPanel: {fileID: 784550680}
   progressPanel: {fileID: 725712848}
-  broken: {fileID: 1947696080}
   repairProgress: {fileID: 2107350467}
   shipStatus: {fileID: 1443823024}
   addEnergy: {fileID: 0}
@@ -904,6 +903,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 465c505844950da499dcf096a6da4409, type: 3}
+--- !u!114 &512982999 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1578147376535755816, guid: b58deefb6d4b1304c89d788673178585,
+    type: 3}
+  m_PrefabInstance: {fileID: 1578147376606283632}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dcfaa8e76be4a84691296358dfbd1f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &527081788
 GameObject:
   m_ObjectHideFlags: 0
@@ -2388,7 +2399,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   repairPanel: {fileID: 323777194}
   progressPanel: {fileID: 1039993085}
-  broken: {fileID: 1013835905}
   repairProgress: {fileID: 1167387984}
   shipStatus: {fileID: 1443823024}
   addEnergy: {fileID: 0}
@@ -3257,6 +3267,10 @@ PrefabInstance:
       propertyPath: repairUI
       value: 
       objectReference: {fileID: 101842142}
+    - target: {fileID: 211455813, guid: e8f93d29f33993c40b913d60deb48b7d, type: 3}
+      propertyPath: m_crystal
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1757344779509661417, guid: e8f93d29f33993c40b913d60deb48b7d,
         type: 3}
       propertyPath: m_Layer
@@ -3664,7 +3678,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   repairPanel: {fileID: 1942651106}
   progressPanel: {fileID: 1774918769}
-  broken: {fileID: 266774506}
   repairProgress: {fileID: 1822822095}
   shipStatus: {fileID: 1443823024}
   addEnergy: {fileID: 0}
@@ -3717,6 +3730,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 1578147374763310249, guid: b58deefb6d4b1304c89d788673178585,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1578147374763310253, guid: b58deefb6d4b1304c89d788673178585,
         type: 3}
@@ -3842,6 +3860,11 @@ PrefabInstance:
       propertyPath: shipStatus
       value: 
       objectReference: {fileID: 1443823024}
+    - target: {fileID: 5577504699489344353, guid: 8e24051e86b6312428246c4224bd53d4,
+        type: 3}
+      propertyPath: addEnergy
+      value: 
+      objectReference: {fileID: 512982999}
     - target: {fileID: 5577504699489344357, guid: 8e24051e86b6312428246c4224bd53d4,
         type: 3}
       propertyPath: m_Name
@@ -3905,22 +3928,22 @@ PrefabInstance:
     - target: {fileID: 5577504699489344358, guid: 8e24051e86b6312428246c4224bd53d4,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -323.6
+      value: -361.9
       objectReference: {fileID: 0}
     - target: {fileID: 5577504699489344358, guid: 8e24051e86b6312428246c4224bd53d4,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -40.200012
+      value: -87.2
       objectReference: {fileID: 0}
     - target: {fileID: 5577504699489344358, guid: 8e24051e86b6312428246c4224bd53d4,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 186.7
+      value: 263.2
       objectReference: {fileID: 0}
     - target: {fileID: 5577504699489344358, guid: 8e24051e86b6312428246c4224bd53d4,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 432.9
+      value: 667.7
       objectReference: {fileID: 0}
     - target: {fileID: 5577504699489344358, guid: 8e24051e86b6312428246c4224bd53d4,
         type: 3}
@@ -3951,21 +3974,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5577504699572835933, guid: 8e24051e86b6312428246c4224bd53d4,
-        type: 3}
-      propertyPath: m_Text
-      value: 'Crystals Required:'
-      objectReference: {fileID: 0}
-    - target: {fileID: 5577504699572835933, guid: 8e24051e86b6312428246c4224bd53d4,
-        type: 3}
-      propertyPath: m_FontData.m_FontSize
-      value: 18
-      objectReference: {fileID: 0}
-    - target: {fileID: 5577504699572835933, guid: 8e24051e86b6312428246c4224bd53d4,
-        type: 3}
-      propertyPath: m_FontData.m_MinSize
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e24051e86b6312428246c4224bd53d4, type: 3}

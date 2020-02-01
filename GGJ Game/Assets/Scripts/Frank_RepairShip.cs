@@ -8,7 +8,7 @@ public class Frank_RepairShip : MonoBehaviour, IPointerEnterHandler, IPointerExi
 {
     public GameObject repairPanel;
     public GameObject progressPanel;
-    public Image broken;
+    //public Image broken;
     public Image repairProgress;
     public ShipStatus shipStatus;
 
@@ -67,8 +67,12 @@ public class Frank_RepairShip : MonoBehaviour, IPointerEnterHandler, IPointerExi
 
         if (repairTime <= 0)
         {
-            broken.gameObject.SetActive(false);
+            //broken.gameObject.SetActive(false);
             progressPanel.gameObject.SetActive(false);
+
+            gameObject.GetComponent<Image>().color = Color.white;
+
+            //Set Sonnar to active
         }    
     }
 }
