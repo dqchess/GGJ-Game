@@ -19,6 +19,8 @@ public class ShipStatus : MonoBehaviour
 
     public GameObject repairUI;
 
+    public Frank_AddEnergy addEnergyPanel;
+
 
     //Lighting
     public float SeaLevel = 42f;
@@ -329,7 +331,7 @@ public class ShipStatus : MonoBehaviour
     //Snoar
     public void sonar_Active()
     {
-        if (sonarSystem)
+        if (sonarSystem && addEnergyPanel.sonarActivated == true)
             SWController.SetActive(true);
     }
     public void sonar_Fixed()

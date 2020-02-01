@@ -15,6 +15,8 @@ public class Frank_AddEnergy : MonoBehaviour
 
     public Frank_RepairShip repairShip;
 
+    public bool sonarActivated = false;
+
     int maxEnergy = 5;
     public int curEnergy;
 
@@ -31,6 +33,25 @@ public class Frank_AddEnergy : MonoBehaviour
             engineOn.gameObject.SetActive(!engineOn.isActiveAndEnabled);
 
             shipStatus.lightingSwitch();
+        }
+    }
+
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            if (engineOff.gameObject.activeInHierarchy == false)
+            {
+                engineOff.gameObject.SetActive(true);
+                engineOn.gameObject.SetActive(false);
+                sonarActivated = true;
+            }
+            else
+            {
+                engineOff.gameObject.SetActive(false);
+                engineOn.gameObject.SetActive(true);
+                sonarActivated = false;
+            }
         }
     }
 

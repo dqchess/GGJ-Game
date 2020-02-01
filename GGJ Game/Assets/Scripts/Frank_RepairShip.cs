@@ -72,7 +72,7 @@ public class Frank_RepairShip : MonoBehaviour, IPointerEnterHandler, IPointerExi
 
             gameObject.GetComponent<Image>().color = Color.white;
 
-            //Set Sonnar to active
+            shipStatus.sonar_Fixed();
         }    
     }
 }
