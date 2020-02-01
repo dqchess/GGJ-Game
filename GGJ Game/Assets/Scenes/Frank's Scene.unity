@@ -729,7 +729,9 @@ MonoBehaviour:
   broken: {fileID: 1947696080}
   repairProgress: {fileID: 2107350467}
   shipStatus: {fileID: 1443823024}
+  addEnergy: {fileID: 0}
   repairAmount: 5
+  isUpgraded: 0
 --- !u!114 &287647028
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -959,10 +961,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 18
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -970,7 +972,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Element S Required:'
+  m_Text: 'Crystals Required:'
 --- !u!222 &527081791
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1420,10 +1422,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 18
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -1431,7 +1433,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Element S Required:'
+  m_Text: 'Crystals Required:'
 --- !u!222 &815338888
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2389,7 +2391,9 @@ MonoBehaviour:
   broken: {fileID: 1013835905}
   repairProgress: {fileID: 1167387984}
   shipStatus: {fileID: 1443823024}
+  addEnergy: {fileID: 0}
   repairAmount: 25
+  isUpgraded: 0
 --- !u!114 &1550706731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2824,10 +2828,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 18
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -2835,7 +2839,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Element S Required:'
+  m_Text: 'Crystals Required:'
 --- !u!222 &1691975756
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3663,7 +3667,9 @@ MonoBehaviour:
   broken: {fileID: 266774506}
   repairProgress: {fileID: 1822822095}
   shipStatus: {fileID: 1443823024}
+  addEnergy: {fileID: 0}
   repairAmount: 10
+  isUpgraded: 0
 --- !u!114 &2120707887
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3945,6 +3951,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5577504699572835933, guid: 8e24051e86b6312428246c4224bd53d4,
+        type: 3}
+      propertyPath: m_Text
+      value: 'Crystals Required:'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5577504699572835933, guid: 8e24051e86b6312428246c4224bd53d4,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 5577504699572835933, guid: 8e24051e86b6312428246c4224bd53d4,
+        type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e24051e86b6312428246c4224bd53d4, type: 3}
