@@ -9,19 +9,19 @@ public class ShipStatus : MonoBehaviour
     public int metal;
 
 
-    private void OnCollisionEnter(Collision other)
+    private void OnTriggerEnter(Collider collider)
     {
-        if (other.collider.tag == "Crystal")
+        if (collider.tag == "Crystal")
         {
             crystal++;
         }
 
-        if (other.collider.tag == "Energy")
+        if (collider.tag == "Energy")
         {
             energy++;
         }
 
-        if (other.collider.tag == "Metal")
+        if (collider.tag == "Metal")
         {
             metal++;
         }
