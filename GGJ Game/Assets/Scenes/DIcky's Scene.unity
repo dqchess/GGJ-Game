@@ -1173,6 +1173,26 @@ PrefabInstance:
       propertyPath: repairShip
       value: 
       objectReference: {fileID: 980180252}
+    - target: {fileID: 4059311979157325605, guid: b58deefb6d4b1304c89d788673178585,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2127242716}
+    - target: {fileID: 4059311979157325605, guid: b58deefb6d4b1304c89d788673178585,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetRepairParty
+      objectReference: {fileID: 0}
+    - target: {fileID: 9205160003424009287, guid: b58deefb6d4b1304c89d788673178585,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2127242716}
+    - target: {fileID: 9205160003424009287, guid: b58deefb6d4b1304c89d788673178585,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetDamageControl
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b58deefb6d4b1304c89d788673178585, type: 3}
 --- !u!1001 &1138484418

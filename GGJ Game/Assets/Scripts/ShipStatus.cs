@@ -114,6 +114,32 @@ public class ShipStatus : MonoBehaviour
         }
 
     }
+
+    // buffs
+    public void SetRepairParty()
+    {
+        for (int i = 0; i < repairParty.Length; i++)
+        {
+            if(repairParty[i] <= 0)
+            {
+                repairParty[i] = 15f;
+            }
+        }
+    }
+
+    public void SetDamageControl()
+    {
+        for (int i = 0; i < damageControl.Length; i++)
+        {
+            if(damageControl[i] <= 0)
+            {
+                for (int f = 0; f < waterLeaked.Length; f++)
+                {
+                    waterLeaked[f] = 0f;
+                }
+            }
+        }
+    }
     private void hpBuffEffect()
     {
         float repairPartyNum = 0;
