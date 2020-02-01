@@ -47,7 +47,7 @@ public class Frank_RepairShip : MonoBehaviour, IPointerEnterHandler, IPointerExi
         if(isUpgraded)
         {
             repairTime -= Time.deltaTime;
-            repairProgress.fillAmount = repairTime += .1f;
+            repairProgress.fillAmount = 1 - repairTime / 5;
         }
 
         if (repairTime <= 0)
