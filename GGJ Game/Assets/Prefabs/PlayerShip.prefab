@@ -349,6 +349,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67b21e8e5b4dd49419af58ba057e510f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myTrans: {fileID: 6218864196538054931}
   AccSpeed: 0.1
   Pitch_Speed: 0.1
   Yaw_Speed: 0.1
@@ -357,8 +358,12 @@ MonoBehaviour:
   Speed_Max: 0.5
   Pitch_Min: -45
   Pitch_Max: 45
+  posX: 0
+  posZ: 0
   pos: {x: 0, y: 0, z: 0}
   rot: {x: 0, y: 0, z: 0}
+  ResourcesList: []
+  TargetList: []
 --- !u!54 &6218864196538054935
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -645,6 +650,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_health: 0
   m_maxHealth: 100
+  m_damageReceived: 10
   m_crystal: 0
   m_energy: 0
   m_metal: 0
@@ -662,6 +668,12 @@ MonoBehaviour:
   DetectRange: 50
   DetectDepth: 0
   CurrentDepth: 0
+  repairParty: []
+  damageControl: []
+  waterLeaked: []
+  waterLeakedDmg: 0
+  repairPartyDmg: 0
+  timer: 0
 --- !u!136 &6120007121660664237
 CapsuleCollider:
   m_ObjectHideFlags: 0
