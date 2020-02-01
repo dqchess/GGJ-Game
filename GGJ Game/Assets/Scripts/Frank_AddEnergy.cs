@@ -9,6 +9,11 @@ public class Frank_AddEnergy : MonoBehaviour
     public Image engineOn;
     public Image energyFiller;
 
+    public ShipStatus shipStatus;
+
+    int maxEnergy = 5;
+    int curEnergy;
+
     public void ToggleEngine()
     {
         engineOff.gameObject.SetActive(!engineOff.isActiveAndEnabled);
@@ -17,6 +22,11 @@ public class Frank_AddEnergy : MonoBehaviour
 
     public void AddEnergy()
     {
-        energyFiller.fillAmount -= .2f;
+        if(shipStatus.energy > 0 && curEnergy != maxEnergy)
+        {
+            energyFiller.fillAmount -= .2f;
+            shipStatus.energy -= 1;
+            curEnergy++;
+        }
     }
 }
