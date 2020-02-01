@@ -1,18 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Frank_RepairShip : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    //bool isBroken = true;
+    public GameObject repairAmount;
+    //public Image broken;
+    //public Image notBroken;
+
+    private void OnMouseEnter()
     {
-        
+        repairAmount.SetActive(true);
+        Debug.Log("On");
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnMouseExit()
     {
-        
+        repairAmount.SetActive(false);
     }
 }
