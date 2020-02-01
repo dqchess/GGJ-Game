@@ -5,6 +5,10 @@ using UnityEngine.UI;
 
 public class ShipStatus : MonoBehaviour
 {
+    [SerializeField] private float m_health;
+    [SerializeField] private float m_maxHealth = 100f;
+    [SerializeField] private float m_damageReceived = 10f;
+
     [SerializeField] private int m_crystal;
     [SerializeField] private int m_energy;
     [SerializeField] private int m_metal;
@@ -37,6 +41,12 @@ public class ShipStatus : MonoBehaviour
     private bool lightSystem = false;
 
     //-----------------------------------------
+
+    public void Awake()
+    {
+        health = maxHealth;
+    }
+
     private void OnTriggerEnter(Collider collider)
     {
         if (collider.tag == "Crystal" && crystal < maxCrystal)
@@ -55,6 +65,11 @@ public class ShipStatus : MonoBehaviour
         {
             metal++;
             Destroy(collider.gameObject);
+        }
+
+        if(collider.tag == "Terrain")
+        {
+            health -= damageReceived;
         }
     }
 
@@ -107,6 +122,24 @@ public class ShipStatus : MonoBehaviour
     public void lightsystem_Set(bool status)
     {
         lightSystem = status;
+    }
+
+    public float health
+    {
+        get { return m_health; }
+        set { m_health = value; }
+    }
+
+    public float maxHealth
+    {
+        get { return m_maxHealth; }
+        set { m_maxHealth = value; }
+    }
+
+    public float damageReceived
+    {
+        get { return m_damageReceived; }
+        set { m_damageReceived = value; }
     }
 
     public int crystal

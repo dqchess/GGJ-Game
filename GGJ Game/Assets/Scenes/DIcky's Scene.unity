@@ -1173,11 +1173,6 @@ PrefabInstance:
       propertyPath: repairShip
       value: 
       objectReference: {fileID: 980180252}
-    - target: {fileID: 3143197854954715634, guid: b58deefb6d4b1304c89d788673178585,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -48.36914
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b58deefb6d4b1304c89d788673178585, type: 3}
 --- !u!1001 &1138484418
@@ -1725,7 +1720,7 @@ GameObject:
   - component: {fileID: 1490849953}
   m_Layer: 0
   m_Name: Terrain
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -2657,6 +2652,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 675863871, guid: c21e0111ac45b1a4592a831d6a739bf7, type: 3}
+      propertyPath: shipStatus
+      value: 
+      objectReference: {fileID: 2127242716}
     - target: {fileID: 7345710904771220305, guid: c21e0111ac45b1a4592a831d6a739bf7,
         type: 3}
       propertyPath: m_Name

@@ -643,6 +643,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3f53f987d3e0db49aa191b71104f562, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_health: 0
+  m_maxHealth: 100
   m_crystal: 0
   m_energy: 0
   m_metal: 0
