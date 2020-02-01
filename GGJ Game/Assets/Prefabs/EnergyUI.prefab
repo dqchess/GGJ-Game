@@ -776,7 +776,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 1
-  m_FillAmount: 1
+  m_FillAmount: 0
   m_FillClockwise: 0
   m_FillOrigin: 1
   m_UseSpriteMesh: 0
@@ -952,6 +952,8 @@ MonoBehaviour:
   energyFiller: {fileID: 1578147375684089323}
   shipStatus: {fileID: 0}
   energyPanelButton: {fileID: 1106261047395747451}
+  repairShip: {fileID: 0}
+  curEnergy: 0
 --- !u!1 &7621565398435520683
 GameObject:
   m_ObjectHideFlags: 0

@@ -18,6 +18,11 @@ public class Frank_AddEnergy : MonoBehaviour
     int maxEnergy = 5;
     public int curEnergy;
 
+    private void Start()
+    {
+        curEnergy = maxEnergy;
+    }
+
     public void ToggleEngine()
     {
         if(repairShip.isUpgraded == true)
