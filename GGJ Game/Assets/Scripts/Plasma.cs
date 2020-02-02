@@ -11,9 +11,12 @@ public class Plasma : MonoBehaviour
         GetComponent<Rigidbody>().AddForce(transform.forward * speed);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnCollisionEnter(Collision collision)
     {
-
+        if(collision.collider.tag == "Obstacle")
+        {
+            Destroy(collision.gameObject);
+            Debug.Log("HIT");
+        }
     }
 }
