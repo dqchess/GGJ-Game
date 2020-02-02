@@ -331,7 +331,7 @@ public class ShipStatus : MonoBehaviour
     //Snoar
     public void sonar_Active()
     {
-        if (sonarSystem && addEnergyPanel.sonarActivated == true)
+        if (sonarSystem && addEnergyPanel.sonarActivated == false)
             SWController.SetActive(true);
     }
     public void sonar_Fixed()

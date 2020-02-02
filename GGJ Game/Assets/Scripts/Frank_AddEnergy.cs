@@ -45,13 +45,13 @@ public class Frank_AddEnergy : MonoBehaviour
             {
                 engineOff.gameObject.SetActive(true);
                 engineOn.gameObject.SetActive(false);
-                sonarActivated = true;
+                sonarActivated = false;
             }
             else
             {
                 engineOff.gameObject.SetActive(false);
                 engineOn.gameObject.SetActive(true);
-                sonarActivated = false;
+                sonarActivated = true;
             }
         }
     }
