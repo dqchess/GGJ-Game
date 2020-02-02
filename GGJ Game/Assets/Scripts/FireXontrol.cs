@@ -18,7 +18,7 @@ public class FireXontrol : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        fireControl();
     }
     private bool reloadCheck()
     {
@@ -33,11 +33,9 @@ public class FireXontrol : MonoBehaviour
     }
     private void fire()
     {
-        foreach (Transform FirePoint in firepoints)
-        {
             FireSEF.Play();
-            Instantiate(shell, FirePoint.position, FirePoint.rotation);
-        }
+        Instantiate(shell, firepoints[0].position, firepoints[0].rotation);
+        Instantiate(shell, firepoints[1].position, firepoints[1].rotation);
     }
     private void fireControl()
     {

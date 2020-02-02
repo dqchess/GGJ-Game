@@ -14,7 +14,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 32
   m_CollisionDetection: 0
 --- !u!65 &4378946210714786226
 BoxCollider:
@@ -24,7 +24,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7821375296484880727}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.2, y: 0.2, z: 0.2}
@@ -52,6 +52,18 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 1cbda689bb465ea49b41a3db35577a6d, type: 3}
       propertyPath: m_Name
       value: plasma_gun_projectile_001 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 1cbda689bb465ea49b41a3db35577a6d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 1cbda689bb465ea49b41a3db35577a6d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100012, guid: 1cbda689bb465ea49b41a3db35577a6d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1cbda689bb465ea49b41a3db35577a6d, type: 3}
       propertyPath: m_LocalPosition.x
