@@ -2,9 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
+    public Canvas controls;
+
     public void PlayButton()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
@@ -18,7 +21,14 @@ public class MainMenu : MonoBehaviour
 
     public void Tutorial()
     {
-        //open new panel
+        controls.gameObject.SetActive(true);
+        gameObject.SetActive(false);
+    }
+
+    public void BackToMenu()
+    {
+        controls.gameObject.SetActive(false);
+        gameObject.SetActive(true);
     }
 
     public void Credits()
