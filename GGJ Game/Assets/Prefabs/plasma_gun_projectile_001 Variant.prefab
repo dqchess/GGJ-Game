@@ -135,6 +135,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3000
   metal: {fileID: 6800009543510990818, guid: 15d1f043cf0cf9742b85a97b3426857c, type: 3}
+  ps: {fileID: 19800002, guid: b5b0d6af765a3b042a37f67fb0b5d5e0, type: 3}
 --- !u!1001 &7821375296484849655
 PrefabInstance:
   m_ObjectHideFlags: 0

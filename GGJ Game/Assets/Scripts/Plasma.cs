@@ -8,6 +8,8 @@ public class Plasma : MonoBehaviour
 
     public GameObject metal;
 
+    public ParticleSystem ps;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,7 +31,9 @@ public class Plasma : MonoBehaviour
             }
            Destroy(other.transform.parent.gameObject);
 
+            Instantiate(ps, transform.position, transform.rotation);
 
+            Destroy(gameObject);
         }
     }
 }
