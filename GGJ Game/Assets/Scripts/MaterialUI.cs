@@ -14,15 +14,15 @@ public class MaterialUI : MonoBehaviour
     {
         if (gameObject.tag == "Crystal")
         {
-            amount.text = "x" + shipStatus.crystal.ToString();
+            amount.text = shipStatus.crystal.ToString() + "/" + shipStatus.maxCrystal.ToString();
         }
         else if (gameObject.tag == "Energy")
         {
-            amount.text = "x" + shipStatus.energy.ToString();
+            amount.text = shipStatus.energy.ToString() + "/" + shipStatus.maxEnergy.ToString();
         }
         else if (gameObject.tag == "Metal")
         {
-            amount.text = "x" + shipStatus.metal.ToString();
+            amount.text = shipStatus.metal.ToString() + "/" + shipStatus.maxMetal.ToString();
         }
     }
 }
