@@ -101,7 +101,12 @@ public class ShipStatus : MonoBehaviour
 
         if (collider.tag == "Obstacle")
         {
-            health -= damageReceived;
+            //health -= damageReceived;
+            for (int i = 0; i < waterLeaked.Length; i++)
+            {
+                if (waterLeaked[i] <= 0)
+                    waterLeaked[i] = 30f;
+            }
         }
 
         if (collider.tag == "Enemy")

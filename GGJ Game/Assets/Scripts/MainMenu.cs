@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class MainMenu : MonoBehaviour
 {
     public Canvas controls;
+    public Canvas credist;
 
     public void PlayButton()
     {
@@ -28,11 +29,13 @@ public class MainMenu : MonoBehaviour
     public void BackToMenu()
     {
         controls.gameObject.SetActive(false);
+        credist.gameObject.SetActive(false);
         gameObject.SetActive(true);
     }
 
     public void Credits()
     {
-        //open new panel
+        credist.gameObject.SetActive(true);
+        gameObject.SetActive(false);
     }
 }

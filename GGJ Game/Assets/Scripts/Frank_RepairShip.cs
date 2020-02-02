@@ -32,7 +32,8 @@ public class Frank_RepairShip : MonoBehaviour, IPointerEnterHandler, IPointerExi
     {
         repairProgress.fillAmount = 0;
 
-        repairTime = repairAmount;
+        //repairTime = repairAmount;
+        repairTime = 5f;
 
         maxRepairTime = repairTime;
     }
@@ -69,7 +70,8 @@ public class Frank_RepairShip : MonoBehaviour, IPointerEnterHandler, IPointerExi
         if(isUpgraded)
         {
             repairTime -= Time.deltaTime;
-            repairProgress.fillAmount = 1 - repairTime / maxRepairTime;
+            //repairProgress.fillAmount = 1 - repairTime / maxRepairTime;
+            repairProgress.fillAmount = 1 - repairTime / 5;
             repairPanel.SetActive(false);
         }
 
