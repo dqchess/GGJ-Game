@@ -5,6 +5,9 @@ using UnityEngine;
 public class Plasma : MonoBehaviour
 {
     public float speed = 1000.0F;
+
+    public GameObject metal;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,7 +18,18 @@ public class Plasma : MonoBehaviour
     {
         if(other.transform.parent.tag == "Obstacle")
         {
-            Destroy(other.transform.parent.gameObject);
+
+            int gacha = Random.Range(0, 2);
+            Debug.Log(gacha);
+            switch (gacha)
+            {
+                case 0:
+                    Instantiate(metal, other.transform.parent.transform.position, other.transform.parent.transform.rotation);
+                    break;
+            }
+           Destroy(other.transform.parent.gameObject);
+
+
         }
     }
 }
