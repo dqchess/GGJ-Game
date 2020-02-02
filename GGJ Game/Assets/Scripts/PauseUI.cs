@@ -25,6 +25,8 @@ public class PauseUI : MonoBehaviour
         if(shipStatus.health <= 0)
         {
             youLose.SetActive(true);
+            GameObject.Find("PlayerShip").GetComponent<PlayerInput>().enabled = false;
+
             pause.SetActive(false); // SAFETY
         }
         else
