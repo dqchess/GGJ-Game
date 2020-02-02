@@ -45,7 +45,7 @@ public class Frank_RepairShip : MonoBehaviour, IPointerEnterHandler, IPointerExi
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        if(shipStatus.crystal >= repairAmount)
+        if(shipStatus.crystal >= repairAmount && addEnergy.curEnergy > 0)
         {
             progressPanel.gameObject.SetActive(true);
             shipStatus.crystal -= repairAmount;
