@@ -92,10 +92,10 @@ public class ShipStatus : MonoBehaviour
             Destroy(collider.gameObject);
         }
 
-        if (collider.tag == "Obstacle")
-        {
-            health -= damageReceived;
-        }
+        //if (collider.tag == "Obstacle")
+        //{
+        //    health -= damageReceived;
+        //}
 
         if (collider.tag == "Enemy")
         {

@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 488883386}
   - component: {fileID: 488883388}
   - component: {fileID: 488883387}
+  - component: {fileID: 488883389}
   m_Layer: 5
   m_Name: Crystal
-  m_TagString: Untagged
+  m_TagString: Crystal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35,7 +36,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -359, y: -41}
+  m_AnchoredPosition: {x: -368.4, y: -41}
   m_SizeDelta: {x: 71.1, y: 47.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &488883388
@@ -74,6 +75,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &488883389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 488883385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92db0a701771ae54f91fa8b00872c1e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amount: {fileID: 873744836}
+  shipStatus: {fileID: 0}
 --- !u!1 &873744834
 GameObject:
   m_ObjectHideFlags: 0
@@ -239,9 +254,10 @@ GameObject:
   - component: {fileID: 3934414685796469603}
   - component: {fileID: 4085929139741060075}
   - component: {fileID: 9188761543704126704}
+  - component: {fileID: 1524880635}
   m_Layer: 5
-  m_Name: Crystal (2)
-  m_TagString: Untagged
+  m_Name: Metal
+  m_TagString: Metal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -292,7 +308,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1ffa6602a37a5eb48a9222b567e8cb16, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 152984f8dd7be94459ff6d438c8a8ef7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -302,6 +318,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1524880635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2757856929106293729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92db0a701771ae54f91fa8b00872c1e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amount: {fileID: 6164427754927714395}
+  shipStatus: {fileID: 0}
 --- !u!1 &3387477032976786631
 GameObject:
   m_ObjectHideFlags: 0
@@ -313,9 +343,10 @@ GameObject:
   - component: {fileID: 2829515413418825746}
   - component: {fileID: 6127517165550370847}
   - component: {fileID: 2582743928939274571}
+  - component: {fileID: 1524880636}
   m_Layer: 5
-  m_Name: Crystal (1)
-  m_TagString: Untagged
+  m_Name: Energy
+  m_TagString: Energy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -337,8 +368,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -226, y: -41}
-  m_SizeDelta: {x: 71.1, y: 47.8}
+  m_AnchoredPosition: {x: -232.7998, y: -41}
+  m_SizeDelta: {x: 42.63, y: 42.53}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6127517165550370847
 CanvasRenderer:
@@ -366,7 +397,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1ffa6602a37a5eb48a9222b567e8cb16, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 22ed8c8d7cd68824299d155a5252cf85, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -376,6 +407,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1524880636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3387477032976786631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92db0a701771ae54f91fa8b00872c1e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amount: {fileID: 642557838268487903}
+  shipStatus: {fileID: 0}
 --- !u!1 &4732465794726712643
 GameObject:
   m_ObjectHideFlags: 0
@@ -410,7 +455,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 40.8, y: 0.000011444}
+  m_AnchoredPosition: {x: 48.3, y: 0.000011444}
   m_SizeDelta: {x: 129.84, y: 52.875}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2306681124098885196
