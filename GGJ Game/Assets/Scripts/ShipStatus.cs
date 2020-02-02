@@ -66,6 +66,10 @@ public class ShipStatus : MonoBehaviour
     private float m_damageCooldown;
     public float maxDamageCooldowm = 75f;
 
+    public AudioSource crystalPickUp;
+    public AudioSource metalPickUp;
+    public AudioSource energyPickUp;
+
     //---------------------------
     public void Awake()
     {
@@ -77,18 +81,21 @@ public class ShipStatus : MonoBehaviour
         if (collider.tag == "Crystal" && crystal < maxCrystal)
         {
             crystal++;
+            crystalPickUp.Play();
             Destroy(collider.gameObject);
         }
 
         if (collider.tag == "Energy" && energy < maxEnergy)
         {
             energy++;
+            energyPickUp.Play();
             Destroy(collider.gameObject);
         }
 
         if (collider.tag == "Metal" && metal < maxMetal)
         {
             metal++;
+            metalPickUp.Play();
             Destroy(collider.gameObject);
         }
 
