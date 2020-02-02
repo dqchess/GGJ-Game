@@ -34,6 +34,8 @@ public class Sonar : MonoBehaviour
         GameObject otherObject = other.gameObject;
         if (other.tag == "Crystal")
             shipController.ResourcesList_Add(otherObject);
+        else if (other.tag == "Energy")
+            shipController.ResourcesList_Add(otherObject);
         else if(other.tag == "Enemies")
             shipController.TargetList_Add(otherObject);
     }
