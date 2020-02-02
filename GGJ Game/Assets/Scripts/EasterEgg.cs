@@ -7,6 +7,7 @@ public class EasterEgg : MonoBehaviour
     public int state;
     public GameObject ship1;
     public GameObject ship2;
+    public ShipStatus shipStatus;
     // Start is called before the first frame update
     void Start()
     {
@@ -46,7 +47,12 @@ public class EasterEgg : MonoBehaviour
             {
                 ship1.SetActive(false);
                 ship2.SetActive(true);
-            }
+                
+            }else if (Input.GetKeyDown(KeyCode.O)){
+            shipStatus.crystal = 99;
+            shipStatus.energy = 99;
+            shipStatus.metal = 99;
+        }
 
     }
 }
