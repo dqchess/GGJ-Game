@@ -13,6 +13,7 @@ TagManager:
   - Obstacle
   - Attack
   - Third
+  - Fifth
   layers:
   - Default
   - TransparentFX

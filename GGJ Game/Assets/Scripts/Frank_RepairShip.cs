@@ -26,6 +26,8 @@ public class Frank_RepairShip : MonoBehaviour, IPointerEnterHandler, IPointerExi
 
     public AudioSource upgradedSound;
 
+    public Canvas winScreen;
+
     private void Start()
     {
         repairProgress.fillAmount = 0;
@@ -101,6 +103,11 @@ public class Frank_RepairShip : MonoBehaviour, IPointerEnterHandler, IPointerExi
                 shipStatus.maxCrystal = 30;
                 shipStatus.maxEnergy = 30;
                 shipStatus.maxMetal = 30;
+            }
+
+            if (gameObject.tag == "Fifth")
+            {
+                winScreen.gameObject.SetActive(true);
             }
 
             isUpgraded = false;
