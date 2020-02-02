@@ -10,6 +10,7 @@ TagManager:
   - Enemy
   - Second
   - Fourth
+  - Metal
   layers:
   - Default
   - TransparentFX

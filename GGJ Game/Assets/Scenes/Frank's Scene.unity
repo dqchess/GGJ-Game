@@ -1126,6 +1126,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 488883389, guid: c21e0111ac45b1a4592a831d6a739bf7, type: 3}
+      propertyPath: shipStatus
+      value: 
+      objectReference: {fileID: 1962112512}
     - target: {fileID: 675863871, guid: c21e0111ac45b1a4592a831d6a739bf7, type: 3}
       propertyPath: shipStatus
       value: 
@@ -1138,6 +1142,14 @@ PrefabInstance:
       propertyPath: damageCooldown
       value: 
       objectReference: {fileID: 1078797522}
+    - target: {fileID: 1524880635, guid: c21e0111ac45b1a4592a831d6a739bf7, type: 3}
+      propertyPath: shipStatus
+      value: 
+      objectReference: {fileID: 1962112512}
+    - target: {fileID: 1524880636, guid: c21e0111ac45b1a4592a831d6a739bf7, type: 3}
+      propertyPath: shipStatus
+      value: 
+      objectReference: {fileID: 1962112512}
     - target: {fileID: 7345710904771220305, guid: c21e0111ac45b1a4592a831d6a739bf7,
         type: 3}
       propertyPath: m_Name
