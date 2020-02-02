@@ -511,6 +511,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnergyUI
       objectReference: {fileID: 0}
+    - target: {fileID: 1578147374763310249, guid: b58deefb6d4b1304c89d788673178585,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1578147374763310253, guid: b58deefb6d4b1304c89d788673178585,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -696,36 +701,6 @@ PrefabInstance:
       propertyPath: addEnergy
       value: 
       objectReference: {fileID: 1078797523}
-    - target: {fileID: 5442263581946205509, guid: 5536e6c302444634fb048b047b7aa1d5,
-        type: 3}
-      propertyPath: shipStatus
-      value: 
-      objectReference: {fileID: 1962112512}
-    - target: {fileID: 5442263581946205509, guid: 5536e6c302444634fb048b047b7aa1d5,
-        type: 3}
-      propertyPath: addEnergy
-      value: 
-      objectReference: {fileID: 1078797523}
-    - target: {fileID: 5442263582093374721, guid: 5536e6c302444634fb048b047b7aa1d5,
-        type: 3}
-      propertyPath: shipStatus
-      value: 
-      objectReference: {fileID: 1962112512}
-    - target: {fileID: 5442263582093374721, guid: 5536e6c302444634fb048b047b7aa1d5,
-        type: 3}
-      propertyPath: addEnergy
-      value: 
-      objectReference: {fileID: 1078797523}
-    - target: {fileID: 5442263582249267898, guid: 5536e6c302444634fb048b047b7aa1d5,
-        type: 3}
-      propertyPath: shipStatus
-      value: 
-      objectReference: {fileID: 1962112512}
-    - target: {fileID: 5442263582249267898, guid: 5536e6c302444634fb048b047b7aa1d5,
-        type: 3}
-      propertyPath: addEnergy
-      value: 
-      objectReference: {fileID: 1078797523}
     - target: {fileID: 5442263582544602468, guid: 5536e6c302444634fb048b047b7aa1d5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -836,11 +811,46 @@ PrefabInstance:
       propertyPath: m_Name
       value: SubRepairUI
       objectReference: {fileID: 0}
-    - target: {fileID: 5442263582544602488, guid: 5536e6c302444634fb048b047b7aa1d5,
+    - target: {fileID: 5577504699977934486, guid: 5536e6c302444634fb048b047b7aa1d5,
         type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
+      propertyPath: shipStatus
+      value: 
+      objectReference: {fileID: 1962112512}
+    - target: {fileID: 5577504699977934486, guid: 5536e6c302444634fb048b047b7aa1d5,
+        type: 3}
+      propertyPath: addEnergy
+      value: 
+      objectReference: {fileID: 1078797523}
+    - target: {fileID: 5577504700465816145, guid: 5536e6c302444634fb048b047b7aa1d5,
+        type: 3}
+      propertyPath: shipStatus
+      value: 
+      objectReference: {fileID: 1962112512}
+    - target: {fileID: 5577504700465816145, guid: 5536e6c302444634fb048b047b7aa1d5,
+        type: 3}
+      propertyPath: addEnergy
+      value: 
+      objectReference: {fileID: 1078797523}
+    - target: {fileID: 5577504700745039685, guid: 5536e6c302444634fb048b047b7aa1d5,
+        type: 3}
+      propertyPath: shipStatus
+      value: 
+      objectReference: {fileID: 1962112512}
+    - target: {fileID: 5577504700745039685, guid: 5536e6c302444634fb048b047b7aa1d5,
+        type: 3}
+      propertyPath: addEnergy
+      value: 
+      objectReference: {fileID: 1078797523}
+    - target: {fileID: 5577504700779830455, guid: 5536e6c302444634fb048b047b7aa1d5,
+        type: 3}
+      propertyPath: shipStatus
+      value: 
+      objectReference: {fileID: 1962112512}
+    - target: {fileID: 5577504700779830455, guid: 5536e6c302444634fb048b047b7aa1d5,
+        type: 3}
+      propertyPath: addEnergy
+      value: 
+      objectReference: {fileID: 1078797523}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5536e6c302444634fb048b047b7aa1d5, type: 3}
 --- !u!114 &1145279216 stripped
