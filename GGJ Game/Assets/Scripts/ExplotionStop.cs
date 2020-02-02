@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ExplotionStop : MonoBehaviour
 {
-    float timer = 2.0f;
+    float timer = 5.0f;
 
     // Update is called once per frame
     void Update()
