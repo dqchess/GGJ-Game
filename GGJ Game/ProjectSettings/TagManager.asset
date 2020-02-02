@@ -10,6 +10,7 @@ TagManager:
   - Second
   - Fourth
   - Metal
+  - Obstacle
   layers:
   - Default
   - TransparentFX
