@@ -24,6 +24,8 @@ public class Frank_RepairShip : MonoBehaviour, IPointerEnterHandler, IPointerExi
 
     public static int partsRepaired;
 
+    public AudioSource upgradedSound;
+
     private void Start()
     {
         repairProgress.fillAmount = 0;
@@ -78,6 +80,9 @@ public class Frank_RepairShip : MonoBehaviour, IPointerEnterHandler, IPointerExi
 
             shipStatus.sonar_Fixed();
 
+            // play upgraded sound
+            upgradedSound.Play();
+
             if (gameObject.tag == "Second")
             {
                 shipStatus.maxCrystal = 20;
@@ -91,6 +96,9 @@ public class Frank_RepairShip : MonoBehaviour, IPointerEnterHandler, IPointerExi
                 shipStatus.maxEnergy = 30;
                 shipStatus.maxMetal = 30;
             }
+
+            isUpgraded = false;
+            repairTime = repairAmount;
         }
     }
 }
