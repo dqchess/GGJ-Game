@@ -22,19 +22,20 @@ public class Frank_AddEnergy : MonoBehaviour
 
     private void Start()
     {
-        curEnergy = maxEnergy;
+        curEnergy = 2;
+        energyFiller.fillAmount = .6f;
     }
 
-    public void ToggleEngine()
-    {
-        if(repairShip.isUpgraded == true)
-        {
-            engineOff.gameObject.SetActive(!engineOff.isActiveAndEnabled);
-            engineOn.gameObject.SetActive(!engineOn.isActiveAndEnabled);
+    //public void ToggleEngine()
+    //{
+    //    if(repairShip.isUpgraded == true)
+    //    {
+    //        engineOff.gameObject.SetActive(!engineOff.isActiveAndEnabled);
+    //        engineOn.gameObject.SetActive(!engineOn.isActiveAndEnabled);
 
-            shipStatus.lightingSwitch();
-        }
-    }
+    //        shipStatus.lightingSwitch();
+    //    }
+    //}
 
     private void Update()
     {
