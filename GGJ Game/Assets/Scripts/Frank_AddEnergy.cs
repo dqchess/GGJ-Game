@@ -17,6 +17,9 @@ public class Frank_AddEnergy : MonoBehaviour
 
     public bool sonarActivated = false;
 
+    public AudioSource add;
+    public AudioSource noAdd;
+
     int maxEnergy = 5;
     public int curEnergy;
 
@@ -63,6 +66,13 @@ public class Frank_AddEnergy : MonoBehaviour
             energyFiller.fillAmount -= .2f;
             shipStatus.energy -= 1;
             curEnergy++;
+            // play add sound
+            add.Play();
+        }
+        else
+        {
+            //play no add sound
+            noAdd.Play();
         }
     }
 

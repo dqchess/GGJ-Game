@@ -137,6 +137,9 @@ public class ShipStatus : MonoBehaviour
     {
         if(repairCooldown <= 0 && metal > 0)
         {
+            // play add sound
+            addEnergyPanel.add.Play();
+
             for (int i = 0; i < repairParty.Length; i++)
             {
                 if (repairParty[i] <= 0)
@@ -148,6 +151,11 @@ public class ShipStatus : MonoBehaviour
 
             metal--;
         }
+        else
+        {
+            // play dont add sound
+            addEnergyPanel.noAdd.Play();
+        }
 
     }
 
@@ -155,6 +163,9 @@ public class ShipStatus : MonoBehaviour
     {
         if(damageCooldown <= 0)
         {
+            // play add sound
+            addEnergyPanel.add.Play();
+
             for (int i = 0; i < damageControl.Length; i++)
             {
                 if (damageControl[i] <= 0)
@@ -166,6 +177,11 @@ public class ShipStatus : MonoBehaviour
                 }
             }
             damageCooldown = maxDamageCooldowm;
+        }
+        else
+        {
+            // play dont add sound
+            addEnergyPanel.noAdd.Play();
         }
     }
     private void hpBuffEffect() // this is where the health will get damage from enemy
