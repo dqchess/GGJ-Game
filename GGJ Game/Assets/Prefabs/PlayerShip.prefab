@@ -3090,9 +3090,9 @@ MonoBehaviour:
   m_health: 0
   m_maxHealth: 100
   m_damageReceived: 10
-  m_crystal: 2
+  m_crystal: 0
   m_energy: 0
-  m_metal: 4
+  m_metal: 0
   m_maxCrystal: 5
   m_maxEnergy: 5
   m_maxMetal: 5
@@ -3119,14 +3119,14 @@ MonoBehaviour:
   - 0
   - 0
   - 0
-  waterLeakedDmg: 0.2
-  repairPartyDmg: 2
+  waterLeakedDmg: 0.33
+  repairPartyDmg: 2.5
   timer: 0
   maxRepairCooldown: 30
   maxDamageCooldowm: 60
-  crystalPickUp: {fileID: 0}
-  metalPickUp: {fileID: 0}
-  energyPickUp: {fileID: 0}
+  crystalPickUp: {fileID: 6514490770590015689}
+  metalPickUp: {fileID: 8797991620403271236}
+  energyPickUp: {fileID: 1701097105623926625}
 --- !u!136 &6120007121660664237
 CapsuleCollider:
   m_ObjectHideFlags: 0
