@@ -8,6 +8,7 @@ public class PlayerInput : MonoBehaviour
     
     public ShipController shipController;
     public ShipStatus shipStatus;
+    public Maneuver maneuver;
     [SerializeField]
     private Vector3 posInput;
     [SerializeField]
@@ -48,6 +49,7 @@ public class PlayerInput : MonoBehaviour
         rotInput = new Vector3(Pitch, Yaw, 0);
 
         shipController.getMovementInput(posInput, rotInput);
+        maneuver.maneuverMovement(posInput, rotInput);
     }
     //Reset
     private void ResetInput()

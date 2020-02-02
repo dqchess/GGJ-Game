@@ -497,8 +497,14 @@ MonoBehaviour:
   cScale: 0
   time: 1
   warpBubble: {fileID: 1319742723235485773}
+  shipmesh: {fileID: 0}
+  playerInput: {fileID: 0}
+  Win: {fileID: 0}
+  theCamera: {fileID: 0}
+  shake: 0
   moveSpeed: 0
   warp: 0
+  switch1: 1
 --- !u!1 &1321273474205749535
 GameObject:
   m_ObjectHideFlags: 0
@@ -1868,6 +1874,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shipController: {fileID: 6218864196538054934}
   shipStatus: {fileID: 211455813}
+  maneuver: {fileID: 3978827136704219216}
   posInput: {x: 0, y: 0, z: 0}
   rotInput: {x: 0, y: 0, z: 0}
   Speed: 0
@@ -1937,6 +1944,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6218864196552489667}
+  - component: {fileID: 3978827136704219216}
   m_Layer: 0
   m_Name: ShipMesh
   m_TagString: Untagged
@@ -1962,6 +1970,23 @@ Transform:
   m_Father: {fileID: 6218864196538054931}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3978827136704219216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6218864196552489666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56339d1521c618344865814bebeef514, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maneuverAngle: 5
+  manruverRange: 2
+  manruverAcc: 0.01
+  newlocalposz: 0
+  newlocalrotz: 0
 --- !u!1 &6218864197403444281
 GameObject:
   m_ObjectHideFlags: 0
