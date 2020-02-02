@@ -1721,12 +1721,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myTrans: {fileID: 6218864196538054931}
-  AccSpeed: 0.1
-  Pitch_Speed: 0.1
-  Yaw_Speed: 0.1
-  UpDown_Speed: 0.1
-  Speed_Min: -0.25
-  Speed_Max: 0.5
+  AccSpeed: 0.01
+  Pitch_Speed: 0.5
+  Yaw_Speed: 1
+  UpDown_Speed: 4
+  Speed_Min: -0.1
+  Speed_Max: 1
   Pitch_Min: -45
   Pitch_Max: 45
   posX: 0
@@ -1743,7 +1743,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6218864196538054930}
   serializedVersion: 2
-  m_Mass: 10
+  m_Mass: 15
   m_Drag: 0
   m_AngularDrag: 5
   m_UseGravity: 0
