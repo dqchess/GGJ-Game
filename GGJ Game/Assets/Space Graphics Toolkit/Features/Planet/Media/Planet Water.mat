@@ -4,8 +4,9 @@
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: Planet Water
   m_Shader: {fileID: 4800000, guid: a5f40074ccb50df44ae3999830305ff9, type: 3}
   m_ShaderKeywords: SGT_A _NORMALMAP _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
@@ -78,6 +79,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _NightTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -91,7 +96,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _WaterColor:
-        m_Texture: {fileID: 2800000, guid: 9c94558e33ef46a428ea0d07aabc9b14, type: 3}
+        m_Texture: {fileID: 2800000, guid: 924dc799eaa664446be4375aed68494c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _WaterLevelMap:
@@ -117,6 +122,8 @@ Material:
     - _IceOverWater: 0
     - _Metallic: 0
     - _Mode: 0
+    - _NightOffset: 0
+    - _NightSharpness: 1
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _Smoothness: 1
