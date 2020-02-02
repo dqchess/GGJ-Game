@@ -1150,6 +1150,16 @@ PrefabInstance:
       propertyPath: shipStatus
       value: 
       objectReference: {fileID: 1962112512}
+    - target: {fileID: 3934414685796469603, guid: c21e0111ac45b1a4592a831d6a739bf7,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -121.1001
+      objectReference: {fileID: 0}
+    - target: {fileID: 3934414685796469603, guid: c21e0111ac45b1a4592a831d6a739bf7,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -38.19995
+      objectReference: {fileID: 0}
     - target: {fileID: 7345710904771220305, guid: c21e0111ac45b1a4592a831d6a739bf7,
         type: 3}
       propertyPath: m_Name
