@@ -3266,6 +3266,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SonarWase
       objectReference: {fileID: 0}
+    - target: {fileID: 5790891544936243379, guid: c1634d1007382694d9b803ba4ed936e1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5790891544936243400, guid: c1634d1007382694d9b803ba4ed936e1,
         type: 3}
       propertyPath: m_LocalPosition.x

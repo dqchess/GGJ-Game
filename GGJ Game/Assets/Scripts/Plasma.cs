@@ -11,12 +11,11 @@ public class Plasma : MonoBehaviour
         GetComponent<Rigidbody>().AddForce(transform.forward * speed);
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if(collision.collider.tag == "Obstacle")
+        if(other.transform.parent.tag == "Obstacle")
         {
-            Destroy(collision.gameObject);
-            Debug.Log("HIT");
+            Destroy(other.transform.parent.gameObject);
         }
     }
 }
