@@ -135,7 +135,7 @@ public class ShipStatus : MonoBehaviour
     // buffs
     public void SetRepairParty() // set the timer buff from 0 to 15
     {
-        if(repairCooldown <= 0 && metal > 0)
+        if(repairCooldown <= 0 && metal > 2)
         {
             // play add sound
             addEnergyPanel.add.Play();
@@ -149,7 +149,7 @@ public class ShipStatus : MonoBehaviour
             }
             repairCooldown = maxRepairCooldown;
 
-            metal--;
+            metal -= 3;
         }
         else
         {
