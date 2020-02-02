@@ -92,7 +92,7 @@ public class ShipStatus : MonoBehaviour
             Destroy(collider.gameObject);
         }
 
-        if (collider.tag == "Terrain")
+        if (collider.tag == "Obstacle")
         {
             health -= damageReceived;
         }

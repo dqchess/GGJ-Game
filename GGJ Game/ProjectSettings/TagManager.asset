@@ -6,10 +6,10 @@ TagManager:
   tags:
   - Crystal
   - Energy
-  - Terrain
   - Enemy
   - Second
   - Fourth
+  - Obstacle
   layers:
   - Default
   - TransparentFX
