@@ -11,6 +11,7 @@ TagManager:
   - Fourth
   - Metal
   - Obstacle
+  - Attack
   layers:
   - Default
   - TransparentFX
@@ -23,7 +24,7 @@ TagManager:
   - Player
   - Resources
   - Sonar_wave
-  - 
+  - Attack
   - 
   - 
   - 
