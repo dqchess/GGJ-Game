@@ -260,7 +260,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -2
   m_TargetDisplay: 0
 --- !u!114 &1578147374763310251
 MonoBehaviour:
@@ -809,7 +809,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1578147375769952468
 RectTransform:
   m_ObjectHideFlags: 0
@@ -963,8 +963,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dcfaa8e76be4a84691296358dfbd1f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  engineOff: {fileID: 1578147375769952469}
-  engineOn: {fileID: 1578147374672198600}
   energyFiller: {fileID: 1578147375684089323}
   shipStatus: {fileID: 0}
   energyPanelButton: {fileID: 1106261047395747451}
@@ -2125,7 +2123,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 220.3, y: 16.78}
+  m_AnchoredPosition: {x: 213.8, y: 16.78}
   m_SizeDelta: {x: 64.88, y: 30.63}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8612419264882229166

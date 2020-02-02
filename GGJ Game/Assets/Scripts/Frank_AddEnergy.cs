@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class Frank_AddEnergy : MonoBehaviour
 {
-    public Image engineOff;
-    public Image engineOn;
+    //public Image engineOff;
+    //public Image engineOn;
     public Image energyFiller;
 
     public ShipStatus shipStatus;
@@ -40,24 +40,24 @@ public class Frank_AddEnergy : MonoBehaviour
     //    }
     //}
 
-    private void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            if (engineOff.gameObject.activeInHierarchy == false)
-            {
-                engineOff.gameObject.SetActive(true);
-                engineOn.gameObject.SetActive(false);
-                sonarActivated = false;
-            }
-            else
-            {
-                engineOff.gameObject.SetActive(false);
-                engineOn.gameObject.SetActive(true);
-                sonarActivated = true;
-            }
-        }
-    }
+    //private void Update()
+    //{
+    //    if(Input.GetKeyDown(KeyCode.Space))
+    //    {
+    //        if (engineOff.gameObject.activeInHierarchy == false)
+    //        {
+    //            engineOff.gameObject.SetActive(true);
+    //            engineOn.gameObject.SetActive(false);
+    //            sonarActivated = false;
+    //        }
+    //        else
+    //        {
+    //            engineOff.gameObject.SetActive(false);
+    //            engineOn.gameObject.SetActive(true);
+    //            sonarActivated = true;
+    //        }
+    //    }
+    //}
 
     public void AddEnergy()
     {
