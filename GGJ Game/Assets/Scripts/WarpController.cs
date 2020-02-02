@@ -11,6 +11,8 @@ public class WarpController : MonoBehaviour
     public float time;
     public GameObject warpBubble;
     public GameObject shipmesh;
+    public PlayerInput playerInput;
+    public GameObject Win;
     public float moveSpeed;
     public bool warp = false;
     public bool switch1 = true;
@@ -35,12 +37,12 @@ public class WarpController : MonoBehaviour
     {
         if (warp)
         {
+            playerInput.enabled = false;
             warpBubble.SetActive(true);
             if (transform.localPosition.z > 0)
             {
                 if (switch1)
                 {
-
                     transform.localPosition -= Vector3.forward * Time.deltaTime * moveSpeed;
                     cScale = ((startZ - transform.localPosition.z) / startZ) * endScale;
                     transform.localScale = new Vector3(cScale, cScale, cScale);
@@ -49,8 +51,9 @@ public class WarpController : MonoBehaviour
             }
             else
             {
-                shipmesh.SetActive(false);
-                warpBubble.SetActive(false);
+                shipmesh.transform.localPosition+= Vector3.forward * Time.deltaTime * 500;
+                warpBubble.transform.parent=shipmesh.transform;
+                Win.SetActive(true);
             }
         }
     }

@@ -20,6 +20,7 @@ public class SonarMap : MonoBehaviour
     {
         MapUpdate(RIcon, shipController.ResourcesList_Get());
         MapUpdate(TIcon, shipController.TargetList_Get());
+        transform.eulerAngles = new Vector3 (0,0, shipController.transform.eulerAngles.z);
     }
     private void MapUpdate(GameObject[] iconList, List<GameObject> itemList)
     {

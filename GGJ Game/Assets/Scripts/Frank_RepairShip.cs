@@ -30,6 +30,8 @@ public class Frank_RepairShip : MonoBehaviour, IPointerEnterHandler, IPointerExi
 
     public WarpController warpController;
 
+    public GameObject subRepairUI;
+
     private void Start()
     {
         repairProgress.fillAmount = 0;
@@ -113,7 +115,7 @@ public class Frank_RepairShip : MonoBehaviour, IPointerEnterHandler, IPointerExi
             {
                 Debug.Log("Im tired");
                 warpController.gotothewarp();
-                repairPanel.SetActive(false);
+                subRepairUI.SetActive(false);
 
 
 
