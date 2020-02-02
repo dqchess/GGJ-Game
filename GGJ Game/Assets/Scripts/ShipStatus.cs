@@ -64,7 +64,7 @@ public class ShipStatus : MonoBehaviour
     private float m_repairCooldown;
     public float maxRepairCooldown = 30f;
     private float m_damageCooldown;
-    public float maxDamageCooldowm = 60f;
+    public float maxDamageCooldowm = 75f;
 
     //---------------------------
     public void Awake()
@@ -135,7 +135,7 @@ public class ShipStatus : MonoBehaviour
     // buffs
     public void SetRepairParty() // set the timer buff from 0 to 15
     {
-        if(repairCooldown <= 0)
+        if(repairCooldown <= 0 && metal > 0)
         {
             for (int i = 0; i < repairParty.Length; i++)
             {
@@ -145,6 +145,8 @@ public class ShipStatus : MonoBehaviour
                 }
             }
             repairCooldown = maxRepairCooldown;
+
+            metal--;
         }
 
     }
