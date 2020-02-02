@@ -8,6 +8,8 @@ TagManager:
   - Energy
   - Terrain
   - Enemy
+  - Second
+  - Fourth
   layers:
   - Default
   - TransparentFX

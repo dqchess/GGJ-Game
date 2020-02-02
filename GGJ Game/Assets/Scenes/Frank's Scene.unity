@@ -514,7 +514,7 @@ PrefabInstance:
     - target: {fileID: 1578147374763310249, guid: b58deefb6d4b1304c89d788673178585,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1578147374763310253, guid: b58deefb6d4b1304c89d788673178585,
         type: 3}
@@ -1768,7 +1768,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 211455813, guid: e8f93d29f33993c40b913d60deb48b7d, type: 3}
       propertyPath: m_crystal
-      value: 5
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 211455813, guid: e8f93d29f33993c40b913d60deb48b7d, type: 3}
       propertyPath: addEnergyPanel

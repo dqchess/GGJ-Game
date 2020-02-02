@@ -77,13 +77,20 @@ public class Frank_RepairShip : MonoBehaviour, IPointerEnterHandler, IPointerExi
             gameObject.GetComponent<Image>().color = Color.white;
 
             shipStatus.sonar_Fixed();
-        }
-        
-        if (partsRepaired == 2)
-        {
-            shipStatus.maxCrystal = 10;
-            shipStatus.maxEnergy = 10;
-            shipStatus.maxMetal = 10;
+
+            if (gameObject.tag == "Second")
+            {
+                shipStatus.maxCrystal = 20;
+                shipStatus.maxEnergy = 20;
+                shipStatus.maxMetal = 20;
+            }
+
+            if (gameObject.tag == "Fourth")
+            {
+                shipStatus.maxCrystal = 30;
+                shipStatus.maxEnergy = 30;
+                shipStatus.maxMetal = 30;
+            }
         }
     }
 }
