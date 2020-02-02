@@ -74,4 +74,10 @@ public class PauseUI : MonoBehaviour
     {
         SceneManager.LoadScene("Main Menu");
     }
+
+    public void QuitGame()
+    {
+        Debug.Log("Quit");
+        Application.Quit();
+    }
 }
