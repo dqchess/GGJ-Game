@@ -1786,6 +1786,10 @@ PrefabInstance:
       propertyPath: m_maxMetal
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 211455813, guid: e8f93d29f33993c40b913d60deb48b7d, type: 3}
+      propertyPath: m_metal
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2277959424938876628, guid: e8f93d29f33993c40b913d60deb48b7d,
         type: 3}
       propertyPath: shipController
