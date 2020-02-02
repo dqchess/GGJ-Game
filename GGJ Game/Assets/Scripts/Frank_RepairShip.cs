@@ -90,6 +90,12 @@ public class Frank_RepairShip : MonoBehaviour, IPointerEnterHandler, IPointerExi
                 shipStatus.maxMetal = 20;
             }
 
+            if (gameObject.tag == "Third")
+            {
+                //Enable weapon
+                FireXontrol.isActive = true;
+            }
+
             if (gameObject.tag == "Fourth")
             {
                 shipStatus.maxCrystal = 30;

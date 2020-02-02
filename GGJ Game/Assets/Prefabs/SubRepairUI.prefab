@@ -1048,6 +1048,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Part3
       objectReference: {fileID: 0}
+    - target: {fileID: 5577504699489344357, guid: 8e24051e86b6312428246c4224bd53d4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Third
+      objectReference: {fileID: 0}
     - target: {fileID: 5577504699489344358, guid: 8e24051e86b6312428246c4224bd53d4,
         type: 3}
       propertyPath: m_LocalPosition.x

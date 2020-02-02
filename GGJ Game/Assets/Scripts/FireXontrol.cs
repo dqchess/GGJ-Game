@@ -9,6 +9,7 @@ public class FireXontrol : MonoBehaviour
     public float reloadTime = 0.5f;
     public AudioSource FireSEF;
     private float PrevFireTime;
+    public static bool isActive = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -39,13 +40,20 @@ public class FireXontrol : MonoBehaviour
     }
     private void fireControl()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (isActive == false)
         {
-            Debug.Log("Fire");
-            if (reloadCheck())
+            return;
+        }
+        else
+        {
+            if (Input.GetMouseButtonDown(0))
             {
-                fire();
-                PrevFireTime = Time.time;
+                Debug.Log("Fire");
+                if (reloadCheck())
+                {
+                    fire();
+                    PrevFireTime = Time.time;
+                }
             }
         }
     }

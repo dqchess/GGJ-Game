@@ -12,6 +12,7 @@ TagManager:
   - Metal
   - Obstacle
   - Attack
+  - Third
   layers:
   - Default
   - TransparentFX
