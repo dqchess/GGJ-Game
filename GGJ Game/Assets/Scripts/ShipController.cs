@@ -52,8 +52,8 @@ public class ShipController : MonoBehaviour
     public void getMovementInput(Vector3 posInput, Vector3 rotInput)
     {
         //Pitch
-        Pitch = rotInput.x;
-        Yaw = rotInput.y;
+        Pitch = rotInput.x*Pitch_Speed;
+        Yaw = rotInput.y*Yaw_Speed;
         UpDown = posInput.y * .1f;
         //Speed
         Speed += posInput.z;
