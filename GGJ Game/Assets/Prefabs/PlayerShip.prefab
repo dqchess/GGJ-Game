@@ -495,8 +495,10 @@ MonoBehaviour:
   startScale: 0.5
   endScale: 5
   cScale: 0
-  time: 5
+  time: 1
   warpBubble: {fileID: 1319742723235485773}
+  moveSpeed: 0
+  warp: 0
 --- !u!1 &1321273474205749535
 GameObject:
   m_ObjectHideFlags: 0

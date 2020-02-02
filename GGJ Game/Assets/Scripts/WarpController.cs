@@ -10,9 +10,10 @@ public class WarpController : MonoBehaviour
     public float cScale;
     public float time;
     public GameObject warpBubble;
-    private float moveSpeed;
-    private bool warp = false;
-    
+    public GameObject shipmesh;
+    public float moveSpeed;
+    public bool warp = false;
+    public bool switch1 = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,26 +23,36 @@ public class WarpController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        warpspeed();
     }
 
     public void gotothewarp()
     {
         warp = true;
+
     }
     private void warpspeed()
     {
         if (warp)
         {
             warpBubble.SetActive(true);
-            if (transform.position.z > 0)
+            if (transform.localPosition.z > 0)
             {
+                if (switch1)
+                {
 
-                transform.position -= Vector3.forward * Time.deltaTime * moveSpeed;
-                cScale = (1 - transform.position.z / startZ) * endScale;
-                transform.localScale = new Vector3(cScale, cScale, cScale);
+                    transform.localPosition -= Vector3.forward * Time.deltaTime * moveSpeed;
+                    cScale = ((startZ - transform.localPosition.z) / startZ) * endScale;
+                    transform.localScale = new Vector3(cScale, cScale, cScale);
+                }
 
+            }
+            else
+            {
+                shipmesh.SetActive(false);
+                warpBubble.SetActive(false);
             }
         }
     }
+
 }

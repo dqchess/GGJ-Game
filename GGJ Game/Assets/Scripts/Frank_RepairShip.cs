@@ -28,6 +28,8 @@ public class Frank_RepairShip : MonoBehaviour, IPointerEnterHandler, IPointerExi
 
     public Canvas winScreen;
 
+    public WarpController warpController;
+
     private void Start()
     {
         repairProgress.fillAmount = 0;
@@ -109,7 +111,14 @@ public class Frank_RepairShip : MonoBehaviour, IPointerEnterHandler, IPointerExi
 
             if (gameObject.tag == "Fifth")
             {
-                winScreen.gameObject.SetActive(true);
+                Debug.Log("Im tired");
+                warpController.gotothewarp();
+                repairPanel.SetActive(false);
+
+
+
+                // after 10 sec to this
+                //winScreen.gameObject.SetActive(true);
             }
 
             isUpgraded = false;
