@@ -109,7 +109,7 @@ public class ShipStatus : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.I))
+        if (Input.GetKeyDown(KeyCode.I) && !PauseUI.isPaused)
         {
             repairUI.SetActive(!repairUI.activeInHierarchy);
         }

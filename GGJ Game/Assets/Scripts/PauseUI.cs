@@ -10,7 +10,7 @@ public class PauseUI : MonoBehaviour
     public GameObject youLose;
     public GameObject pause;
 
-    public bool isPaused = false;
+    public static bool isPaused = false;
 
     private void Start()
     {
